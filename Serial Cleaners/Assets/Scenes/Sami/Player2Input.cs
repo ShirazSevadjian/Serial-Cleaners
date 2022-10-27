@@ -3,21 +3,22 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlayerInput : MonoBehaviour
+public class Player2Input : MonoBehaviour
 {
     [SerializeField] private float speed = 10;
     [SerializeField] private float rotationSpeed = 300;
 
     private void Start()
     {
-        // nothing to do here...
+
     }
 
     private void Update()
     {
         // Obtain input information (See "Horizontal" and "Vertical" in the Input Manager)
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        float horizontal = Input.GetAxisRaw("Horizontal2");
+        float vertical = Input.GetAxisRaw("Vertical2");
+
 
         Vector3 direction = new Vector3(horizontal, 0.0f, vertical);
         direction = direction.normalized;
