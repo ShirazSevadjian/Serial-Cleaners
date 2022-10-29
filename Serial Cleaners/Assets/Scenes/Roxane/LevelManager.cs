@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LevelManager : MonoBehaviour
 {
@@ -18,17 +19,21 @@ public class LevelManager : MonoBehaviour
     bool isLevelActive = false;
 
 
-
     public float difficultyMultiplier = 1; // Temporary, integrate difficulty as its own thing.
 
 
 
-    // Event system.
-    // start event
-    // victory & defeat events
 
-    // ui?
+    // EVENTS.
+    public UnityEvent_string levelStartEvent;
+    public UnityEvent_string levelEndEvent;
+    public UnityEvent victoryEvent;
+    public UnityEvent defeatEvent;
+    public UnityEvent_float levelTimerTick;
 
+    void LevelEventListener() { Debug.Log("There was an event."); }
+    void LevelEventListener(string message) { Debug.Log("There was an event. " + message); }
+    void LevelEventListener(float value) { Debug.Log("There was an event, value of " + value + ".") ; }
 
 
     // CONSTRUCTOR.
@@ -46,7 +51,7 @@ public class LevelManager : MonoBehaviour
             Instance = this;
         }
 
-        // Set parameters.
+        // Set initial parameters.
         currentLvl = initialLevelParameters;
         SetParameters(currentLvl);
     }
@@ -64,12 +69,17 @@ public class LevelManager : MonoBehaviour
         else
             Instance = this;
 
-        // Do not destroy on load.
-        DontDestroyOnLoad(this);
-
         // Set parameters.
         SetParameters(currentLvl);
 
+        // Register events.
+        levelStartEvent.AddListener(LevelEventListener);
+        levelEndEvent.AddListener(LevelEventListener);
+        victoryEvent.AddListener(LevelEventListener);
+        defeatEvent.AddListener(LevelEventListener);
+        levelTimerTick.AddListener(LevelEventListener);
+
+        // Start the level. Delay?
         StartLevel();
     }
 
@@ -99,20 +109,24 @@ public class LevelManager : MonoBehaviour
 
 
 
-
+    // 
     public void StartLevel(bool resetTimer = false)
     {
-        isLevelActive = true;
-
         // If requested, restart the timer.
         if (resetTimer)
             SetTimerDuration(currentLvl.baseLvlDuration);
 
+
+        // Update UI elements.
+        levelTimerTick.Invoke(remainingTimerDuration);
+
         // Start timer coroutine.
         StartCoroutine(DecreaseTimer());
+
+        isLevelActive = true;
+        levelStartEvent.Invoke("The level has started.");
     }
 
-    // different restart level?
 
 
 
@@ -129,22 +143,12 @@ public class LevelManager : MonoBehaviour
         while (remainingTimerDuration > 0)
         {
             remainingTimerDuration--;
-
-            // update UI, send event?
+            levelTimerTick.Invoke(remainingTimerDuration);
 
             yield return new WaitForSeconds(1f);
         }
 
-        // do end of game events
+        // Send end of level event.
+        levelEndEvent.Invoke("The level has ended.");
     }
-
-    
-
-
-
-
-    
-
-
-
 }

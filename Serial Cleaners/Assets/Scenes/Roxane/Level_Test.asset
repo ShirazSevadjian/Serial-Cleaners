@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Level_Test
   m_EditorClassIdentifier: 
   lvlName: Test Level
-  baseLvlDuration: 180
+  baseLvlDuration: 31
