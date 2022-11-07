@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class BloodPuddle : MonoBehaviour
 {
-    public Texture2D maskBaseTexture;
-    public Texture2D brushTexture;
+    [SerializeField] private Texture2D maskBaseTexture;
+    [SerializeField] private Texture2D brushTexture;
+
+    [SerializeField] private float threshold = 0.1f;
 
     private Material material;
     private Texture2D templateMask;
@@ -12,9 +14,16 @@ public class BloodPuddle : MonoBehaviour
     private float bloodRemaining;
     private float bloodPercentange;
 
-    private void Start()
+    private BloodManager bloodManager;
+
+    private void Awake()
     {
         material = gameObject.GetComponent<MeshRenderer>().material;
+    }
+
+    private void Start()
+    {
+        bloodManager = BloodManager.Instance;
 
         bloodAmountTotal = 0.0f;
         for (int x = 0; x < maskBaseTexture.width; x++)
@@ -35,7 +44,7 @@ public class BloodPuddle : MonoBehaviour
         if (other.CompareTag("Mop"))
         {
             Ray ray = new Ray(other.transform.position, -Vector3.up);
-            if (Physics.Raycast(ray, out RaycastHit hitInfo, 1.0f))
+            if (Physics.Raycast(ray, out RaycastHit hitInfo, 2.0f))
             {
                 Vector2 textureCoord = hitInfo.textureCoord;
                 int pixelX = (int)(textureCoord.x * templateMask.width);
@@ -51,13 +60,14 @@ public class BloodPuddle : MonoBehaviour
                         Color pixel = brushTexture.GetPixel(x, y);
                         Color pixelMask = templateMask.GetPixel(pixelXOffset + x, pixelYOffset + y);
 
-                        if (pixelMask.g == 1)
+                        if (pixelMask.g == 1 && pixel.g <= 0.1f)
                         {
-                            bloodRemaining -= 0.8f;
+                            bloodRemaining--;
                             bloodPercentange = bloodRemaining / bloodAmountTotal;
-                            
-                            if (bloodPercentange < 0.1f)
+
+                            if (bloodPercentange < threshold)
                             {
+                                bloodManager.RemovePuddle(this);
                                 Destroy(gameObject);
                             }
                         }
@@ -73,7 +83,6 @@ public class BloodPuddle : MonoBehaviour
 
     private void FixedUpdate()
     {
-        print(bloodPercentange);
     }
 
     private void CreateTexture()
