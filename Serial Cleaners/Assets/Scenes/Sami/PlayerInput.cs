@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlayerInput : MonoBehaviour
+public class PlayerInput1 : MonoBehaviour
 {
     [SerializeField] private float speed = 10;
     [SerializeField] private float rotationSpeed = 300;
