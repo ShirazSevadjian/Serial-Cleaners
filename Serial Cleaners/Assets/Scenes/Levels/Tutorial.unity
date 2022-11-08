@@ -714,6 +714,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433388726}
   m_Mesh: {fileID: -87440523346993302, guid: 525c83ef8277cc2418c60fd9785d3d18, type: 3}
+--- !u!95 &488901320 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 460dd88b0a22ecf40b7898e11a15e328, type: 3}
+  m_PrefabInstance: {fileID: 677816608}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &491489057
 GameObject:
   m_ObjectHideFlags: 0
@@ -3226,7 +3231,7 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 5d040156cc858594687ac4c817120805, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 17bc5902e64d69c4799d56144329e37f, type: 2}
+      objectReference: {fileID: 9100000, guid: 950b416b5fd4fa04eb36e430f9bf906c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d040156cc858594687ac4c817120805, type: 3}
 --- !u!4 &1238883912 stripped
@@ -4798,6 +4803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   rotationSpeed: 300
+  myAnimator: {fileID: 488901320}
 --- !u!54 &1703680800
 Rigidbody:
   m_ObjectHideFlags: 0
