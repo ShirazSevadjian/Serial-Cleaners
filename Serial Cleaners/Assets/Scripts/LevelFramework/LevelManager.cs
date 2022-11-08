@@ -33,7 +33,7 @@ public class LevelManager : MonoBehaviour
 
     void LevelEventListener() { Debug.Log("There was an event."); }
     void LevelEventListener(string message) { Debug.Log("There was an event. " + message); }
-    void LevelEventListener(float value) { Debug.Log("There was an event, value of " + value + ".") ; }
+    void LevelEventListener(float value) { } //Debug.Log("There was an event, value of " + value + ".") ; 
 
 
     // CONSTRUCTOR.
