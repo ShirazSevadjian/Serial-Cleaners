@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour
 
 
     // EVENTS.
-    public UnityEvent_string levelStartEvent;
+    public UnityEvent_float levelStartEvent;
     public UnityEvent_string levelEndEvent;
     public UnityEvent victoryEvent;
     public UnityEvent defeatEvent;
@@ -79,6 +79,7 @@ public class LevelManager : MonoBehaviour
         defeatEvent.AddListener(LevelEventListener);
         levelTimerTick.AddListener(LevelEventListener);
 
+
         // Start the level. Delay?
         StartLevel();
     }
@@ -124,7 +125,7 @@ public class LevelManager : MonoBehaviour
         StartCoroutine(DecreaseTimer());
 
         isLevelActive = true;
-        levelStartEvent.Invoke("The level has started.");
+        levelStartEvent.Invoke(remainingTimerDuration);
     }
 
 
