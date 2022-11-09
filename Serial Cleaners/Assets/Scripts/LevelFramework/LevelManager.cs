@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -11,8 +12,12 @@ public class LevelManager : MonoBehaviour
     // Level info scriptable object.
     [SerializeField] private LevelParameters currentLvl;
 
+    // Pause effect.
+    [SerializeField] private GameObject pausePannel;
+
     // Parameters.
     [SerializeField] private float remainingTimerDuration;
+    public bool gamePaused;
     // Other stuff
 
     // Is the level currently running?
@@ -84,6 +89,18 @@ public class LevelManager : MonoBehaviour
         StartLevel();
     }
 
+    private void Update()
+    {
+        // Handle pausing.
+        if (Input.GetButtonDown("Pause"))
+        {
+            if (gamePaused)
+                ResumeGame();
+            else PauseGame();
+        }
+       
+    }
+
 
     // MANAGEMENT METHODS.
     private void SetParameters(LevelParameters lvlParams)
@@ -91,7 +108,7 @@ public class LevelManager : MonoBehaviour
         SetTimerDuration(lvlParams.baseLvlDuration);
     }
 
-    public void ResetParametersFromSO(LevelParameters lvlParams, bool updateCurrentLvlSO = true) // Reset the level's parameters to those of the inputed SO.
+    public void ResetParameters(LevelParameters lvlParams, bool updateCurrentLvlSO = true) // Reset the level's parameters to those of the inputed SO.
     {
         // If requested, change the currentLvl SO reference.
         if (updateCurrentLvlSO)
@@ -101,9 +118,9 @@ public class LevelManager : MonoBehaviour
         SetParameters(lvlParams);
     }
 
-    public void ResetParametersFromSO() // Reset the level's parameters to those found in the currentLvl SO reference.
+    public void ResetParameters() // Reset the level's parameters to those found in the currentLvl SO reference.
     {
-        ResetParametersFromSO(currentLvl);
+        ResetParameters(currentLvl);
     }
 
     
@@ -151,5 +168,27 @@ public class LevelManager : MonoBehaviour
 
         // Send end of level event.
         levelEndEvent.Invoke("The level has ended.");
+    }
+
+
+
+
+    // PAUSE
+    private void PauseGame()
+    {
+        Time.timeScale = 0;
+        pausePannel.SetActive(true);
+
+        gamePaused = true;
+        Debug.Log("The game was paused.");
+    }
+
+    private void ResumeGame()
+    {
+        Time.timeScale = 1;
+        pausePannel.SetActive(false);
+
+        gamePaused = false;
+        Debug.Log("The game has resumed.");
     }
 }
