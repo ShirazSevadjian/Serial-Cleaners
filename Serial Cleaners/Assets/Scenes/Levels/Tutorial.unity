@@ -4839,6 +4839,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelManagerAndUI
       objectReference: {fileID: 0}
+    - target: {fileID: 2397762244802282134, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
+      propertyPath: m_Text
+      value: 'Time Remaining : 00:00'
+      objectReference: {fileID: 0}
     - target: {fileID: 3128707740322207316, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

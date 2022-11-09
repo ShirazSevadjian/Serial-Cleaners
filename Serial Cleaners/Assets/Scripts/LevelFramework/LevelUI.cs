@@ -15,6 +15,7 @@ public class LevelUI : MonoBehaviour
     // METHODS
     public void UpdateTimerText(float value)
     {
-        timeCountdownText.text = counterTitle + value.ToString("000");
+        System.TimeSpan timeSpan = System.TimeSpan.FromSeconds(value);
+        timeCountdownText.text = counterTitle +  string.Format("{0:00}:{1:00}", timeSpan.Minutes, timeSpan.Seconds);
     }
 }
