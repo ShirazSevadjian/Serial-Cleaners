@@ -86,7 +86,8 @@ public class LevelManager : MonoBehaviour
 
 
         // Start the level. Delay?
-        StartLevel();
+        levelTimerTick.Invoke(remainingTimerDuration);
+        //StartLevel();
     }
 
     private void Update()
@@ -124,12 +125,12 @@ public class LevelManager : MonoBehaviour
     }
 
     
-
-
-
-    // 
+    // These are public so that other scripts can call them using the level manager's instance.
+    // Start of level method.
     public void StartLevel(bool resetTimer = false)
     {
+        Debug.Log("Level is starting.");
+        
         // If requested, restart the timer.
         if (resetTimer)
             SetTimerDuration(currentLvl.baseLvlDuration);
@@ -139,12 +140,24 @@ public class LevelManager : MonoBehaviour
         levelTimerTick.Invoke(remainingTimerDuration);
 
         // Start timer coroutine.
-        StartCoroutine(DecreaseTimer());
+        timerDecreaseCoroutine = StartCoroutine(DecreaseTimer());
 
         isLevelActive = true;
         levelStartEvent.Invoke(remainingTimerDuration);
     }
 
+    // End of level method.
+    public void EndLevel()
+    {
+        isLevelActive = false;
+        
+        // Emit end of level event in case other scripts need it.
+        levelEndEvent.Invoke("The level has ended.");
+
+        //End timer coroutine.
+        StopCoroutine(timerDecreaseCoroutine);
+        Debug.Log(string.Format("There are {0} seconds left to the timer.", remainingTimerDuration));
+    }
 
 
 
@@ -152,11 +165,16 @@ public class LevelManager : MonoBehaviour
     private void SetTimerDuration(float baseLevelDuration)
     {
         remainingTimerDuration = baseLevelDuration * difficultyMultiplier;
+        levelTimerTick.Invoke(remainingTimerDuration);
     }
+
+    Coroutine timerDecreaseCoroutine;
 
     // Timer decrease coroutine.
     IEnumerator DecreaseTimer()
     {
+        yield return new WaitForSeconds(1f);
+
         // Decrease the remaining time by 1 second.
         while (remainingTimerDuration > 0)
         {
@@ -167,10 +185,8 @@ public class LevelManager : MonoBehaviour
         }
 
         // Send end of level event.
-        levelEndEvent.Invoke("The level has ended.");
+        EndLevel();
     }
-
-
 
 
     // PAUSE
