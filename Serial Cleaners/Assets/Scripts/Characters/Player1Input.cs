@@ -3,14 +3,19 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlayerInput : MonoBehaviour
+public class Player1Input : MonoBehaviour
 {
     [SerializeField] private float speed = 10;
     [SerializeField] private float rotationSpeed = 300;
 
+    // Animation.
+    [SerializeField] private Animator myAnimator;
+    private bool isMoving;
+
     private void Start()
     {
-        // nothing to do here...
+        // Find components.
+        myAnimator = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -28,5 +33,13 @@ public class PlayerInput : MonoBehaviour
         // Rotate the gameobject
         if (direction != Vector3.zero)
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(direction, Vector3.up), rotationSpeed * Time.deltaTime);
+
+
+        // Update animation variables.
+        isMoving = !Mathf.Approximately(horizontal, 0f) || !Mathf.Approximately(vertical, 0f);
+
+        // Update animator.
+        myAnimator.SetBool("isMoving", isMoving);
+
     }
 }
