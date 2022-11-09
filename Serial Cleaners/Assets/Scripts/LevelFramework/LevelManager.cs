@@ -129,30 +129,39 @@ public class LevelManager : MonoBehaviour
     // Start of level method.
     public void StartLevel(bool resetTimer = false)
     {
-        Debug.Log("Level is starting.");
-        
-        // If requested, restart the timer.
-        if (resetTimer)
-            SetTimerDuration(currentLvl.baseLvlDuration);
+        if (!isLevelActive)
+        {
+            Debug.Log("Level is starting.");
 
-        // Start timer coroutine.
-        timerDecreaseCoroutine = StartCoroutine(DecreaseTimer());
+            // If requested, restart the timer.
+            if (resetTimer)
+                SetTimerDuration(currentLvl.baseLvlDuration);
 
-        isLevelActive = true;
-        levelStartEvent.Invoke(remainingTimerDuration);
+            // Start timer coroutine.
+            timerDecreaseCoroutine = StartCoroutine(DecreaseTimer());
+
+            isLevelActive = true;
+            levelStartEvent.Invoke(remainingTimerDuration);
+        }
     }
 
     // End of level method.
     public void EndLevel()
     {
-        isLevelActive = false;
-        
-        // Emit end of level event in case other scripts need it.
-        levelEndEvent.Invoke("The level has ended.");
+        if (isLevelActive)
+        {
+            isLevelActive = false;
 
-        //End timer coroutine.
-        StopCoroutine(timerDecreaseCoroutine);
-        Debug.Log(string.Format("There are {0} seconds left to the timer.", remainingTimerDuration));
+            // Emit end of level event in case other scripts need it.
+            levelEndEvent.Invoke("The level has ended.");
+
+            //End timer coroutine.
+            if (timerDecreaseCoroutine != null)
+                StopCoroutine(timerDecreaseCoroutine);
+            Debug.Log(string.Format("There are {0} seconds left to the timer.", remainingTimerDuration));
+
+            // Do checks. Was everything properly cleaned up?
+        }
     }
 
 
