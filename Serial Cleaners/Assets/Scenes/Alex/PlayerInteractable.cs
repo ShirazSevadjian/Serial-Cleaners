@@ -1,23 +1,33 @@
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
 
 public class PlayerInteractable : MonoBehaviour
 {
     [SerializeField] private Transform interactionPositon;
     [SerializeField] private Transform leftHand;
     [SerializeField] private Transform rightHand;
+    [SerializeField] private TwoBoneIKConstraint lBoneConstraint;
+    [SerializeField] private TwoBoneIKConstraint rBoneConstraint;
 
     private Interactable interactableObject;
-    private MopInteraction mopInteraction;
+    //private MopInteraction mopInteraction;
+
+    private bool attached;
+    private Transform rTarget;
+    private Transform lTarget;
 
     private void Update()
     {
         if (Input.GetButtonDown("Cancel"))
         {
-            if (mopInteraction != null)
+            if (interactableObject != null)
             {
-                mopInteraction.Detach();
-                mopInteraction.transform.SetParent(null);
+                lBoneConstraint.weight = 0.0f;
+                rBoneConstraint.weight = 0.0f;
+                attached = false;
 
+                interactableObject.Detach();
+                interactableObject.transform.SetParent(null);
             }
         }
     }
@@ -28,9 +38,37 @@ public class PlayerInteractable : MonoBehaviour
         interactable.transform.localPosition = Vector3.zero;
         interactable.transform.rotation = Quaternion.identity;
 
-        if (interactable.TryGetComponent<MopInteraction>(out mopInteraction))
-       
-        this.leftHand.position = leftHand.position;
-        this.rightHand.position = rightHand.position;
+        if (interactable.TryGetComponent<Interactable>(out interactableObject)) { }
+
+
+        if (leftHand != null)
+        {
+            lBoneConstraint.weight = 1.0f;
+            lTarget = leftHand;
+        }
+        if (rightHand != null)
+        {
+            rBoneConstraint.weight = 1.0f;
+            rTarget = rightHand;
+        }
+
+        attached = true;
+    }
+
+    public void FixedUpdate()
+    {
+        if (attached)
+        {
+            if (lTarget != null)
+            {
+                leftHand.position = lTarget.position;
+                leftHand.localRotation = lTarget.localRotation;
+            }
+            if (rTarget != null)
+            {
+                rightHand.position = rTarget.position;
+                rightHand.localRotation = rTarget.localRotation;
+            }
+        }
     }
 }

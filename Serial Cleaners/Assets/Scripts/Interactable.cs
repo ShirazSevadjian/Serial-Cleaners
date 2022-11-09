@@ -3,7 +3,12 @@ using UnityEngine;
 [RequireComponent(typeof(SphereCollider))]
 public abstract class Interactable : MonoBehaviour
 {
+    [SerializeField] protected GameObject canvas;
+    [SerializeField] protected Transform rightHandPosition;
+    [SerializeField] protected Transform leftHandPosition;
+
     protected SphereCollider _collider;
+    protected Rigidbody _rigidbody;
 
     private bool _isInside;
 
@@ -11,6 +16,7 @@ public abstract class Interactable : MonoBehaviour
 
     protected virtual void Awake()
     {
+        _rigidbody = GetComponent<Rigidbody>();
         _collider = GetComponent<SphereCollider>();
         _collider.isTrigger = true;
     }
@@ -33,6 +39,7 @@ public abstract class Interactable : MonoBehaviour
         {
             _isInside = true;
             player = other.gameObject;
+            canvas.SetActive(true);
         }
     }
 
@@ -42,9 +49,25 @@ public abstract class Interactable : MonoBehaviour
         {
             _isInside = false;
             player = null;
+            canvas.SetActive(false);
         }
     }
 
-    protected abstract void Interact();
-    public abstract void Detach();
+    protected virtual void Interact()
+    {
+        if (player != null)
+        {
+            player.GetComponent<PlayerInteractable>().Attach(this.gameObject, leftHandPosition, rightHandPosition);
+            _collider.enabled = false;
+            _rigidbody.useGravity = false;
+            canvas.SetActive(false);
+        }
+    }
+
+    public virtual void Detach()
+    {
+        canvas.SetActive(true);
+        _collider.enabled = true;
+        _rigidbody.useGravity = true;
+    }
 }
