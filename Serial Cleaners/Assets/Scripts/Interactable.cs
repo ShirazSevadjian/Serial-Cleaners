@@ -7,6 +7,8 @@ public abstract class Interactable : MonoBehaviour
 
     private bool _isInside;
 
+    protected GameObject player;
+
     protected virtual void Awake()
     {
         _collider = GetComponent<SphereCollider>();
@@ -27,13 +29,20 @@ public abstract class Interactable : MonoBehaviour
 
     protected virtual void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) _isInside = true;
+        if (other.CompareTag("Player"))
+        {
+            _isInside = true;
+            player = other.gameObject;
+        }
     }
 
     protected virtual void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player")) _isInside = false;
-       
+        if (other.CompareTag("Player"))
+        {
+            _isInside = false;
+            player = null;
+        }
     }
 
     protected abstract void Interact();
