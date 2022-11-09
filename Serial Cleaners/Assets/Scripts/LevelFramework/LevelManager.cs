@@ -135,10 +135,6 @@ public class LevelManager : MonoBehaviour
         if (resetTimer)
             SetTimerDuration(currentLvl.baseLvlDuration);
 
-
-        // Update UI elements.
-        levelTimerTick.Invoke(remainingTimerDuration);
-
         // Start timer coroutine.
         timerDecreaseCoroutine = StartCoroutine(DecreaseTimer());
 
