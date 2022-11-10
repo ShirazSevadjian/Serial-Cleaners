@@ -204,7 +204,7 @@ public class LevelManager : MonoBehaviour
         Debug.Log("The game was paused.");
     }
 
-    private void ResumeGame()
+    public void ResumeGame()
     {
         Time.timeScale = 1;
         pausePannel.SetActive(false);
