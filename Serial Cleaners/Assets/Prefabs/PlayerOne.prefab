@@ -233,8 +233,8 @@ GameObject:
   - component: {fileID: 5325749924072973393}
   - component: {fileID: 5325749924072973398}
   - component: {fileID: 5325749924072973421}
-  - component: {fileID: 8981981590144616623}
   - component: {fileID: 8637366350711061179}
+  - component: {fileID: 754058951}
   m_Layer: 0
   m_Name: PlayerOne
   m_TagString: Player
@@ -337,21 +337,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &8981981590144616623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5325749924072973399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a06f7d6c2d182044bfb8db83061611d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  rotationSpeed: 150
-  myAnimator: {fileID: 1766054265895578620}
 --- !u!114 &8637366350711061179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,6 +354,21 @@ MonoBehaviour:
   rightHand: {fileID: 1230052542138316055}
   lBoneConstraint: {fileID: 6323322304191475204}
   rBoneConstraint: {fileID: 9028359179779141415}
+--- !u!114 &754058951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5325749924072973399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a06f7d6c2d182044bfb8db83061611d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  rotationSpeed: 300
+  myAnimator: {fileID: 1766054265895578620}
 --- !u!1 &6807667214201394903
 GameObject:
   m_ObjectHideFlags: 0
