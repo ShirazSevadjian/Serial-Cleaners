@@ -6,11 +6,19 @@ public class PlayerInteractable : MonoBehaviour
     [SerializeField] private Transform interactionPositon;
     [SerializeField] private Transform leftHand;
     [SerializeField] private Transform rightHand;
+    [SerializeField] private Transform leftHandBone;
+    [SerializeField] private Transform rightHandBone;
     [SerializeField] private TwoBoneIKConstraint lBoneConstraint;
     [SerializeField] private TwoBoneIKConstraint rBoneConstraint;
 
+    
     public Transform LeftHand { get { return leftHand; } }
     public Transform RightHand { get { return rightHand; } }
+
+    public Transform LeftHandBone { get { return leftHandBone; } }
+    public Transform RightHandBone { get { return rightHandBone; } }
+
+
 
     private Interactable interactableObject;
     //private MopInteraction mopInteraction;
