@@ -15,7 +15,7 @@ public class MopInteraction : Interactable
         base.Interact();
         if (player != null)
         {
-            _capsuleCollider.enabled = false;
+           // _capsuleCollider.enabled = false;
         }
     }
 

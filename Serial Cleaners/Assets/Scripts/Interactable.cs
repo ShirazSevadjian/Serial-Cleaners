@@ -29,7 +29,7 @@ public abstract class Interactable : MonoBehaviour
             if (Input.GetButtonDown("Interact"))
             {
                 Interact();
-            } 
+            }
         }
     }
 
@@ -57,17 +57,21 @@ public abstract class Interactable : MonoBehaviour
     {
         if (player != null)
         {
-            player.GetComponent<PlayerInteractable>().Attach(this.gameObject, leftHandPosition, rightHandPosition);
-            _collider.enabled = false;
-            _rigidbody.useGravity = false;
-            canvas.SetActive(false);
+            if (player.GetComponent<PlayerInteractable>().Attach(this.gameObject, leftHandPosition, rightHandPosition))
+            {
+                _collider.enabled = false;
+                _rigidbody.useGravity = false;
+                _rigidbody.isKinematic = true;
+                canvas.SetActive(false);
+            }
         }
     }
 
     public virtual void Detach()
     {
-        canvas.SetActive(true);
         _collider.enabled = true;
         _rigidbody.useGravity = true;
+        _rigidbody.isKinematic = false;
+        canvas.SetActive(true);
     }
 }

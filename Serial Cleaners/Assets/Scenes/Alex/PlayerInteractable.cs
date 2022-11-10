@@ -28,31 +28,41 @@ public class PlayerInteractable : MonoBehaviour
 
                 interactableObject.Detach();
                 interactableObject.transform.SetParent(null);
+                interactableObject = null;
             }
         }
     }
 
-    public void Attach(GameObject interactable, Transform leftHand, Transform rightHand)
+    public bool Attach(GameObject interactable, Transform leftHand, Transform rightHand)
     {
-        interactable.transform.SetParent(interactionPositon);
-        interactable.transform.localPosition = Vector3.zero;
-        interactable.transform.rotation = Quaternion.identity;
-
-        if (interactable.TryGetComponent<Interactable>(out interactableObject)) { }
-
-
-        if (leftHand != null)
+        if (interactableObject == null)
         {
-            lBoneConstraint.weight = 1.0f;
-            lTarget = leftHand;
-        }
-        if (rightHand != null)
-        {
-            rBoneConstraint.weight = 1.0f;
-            rTarget = rightHand;
-        }
+            interactable.transform.SetParent(interactionPositon);
+            interactable.transform.localPosition = Vector3.zero;
+            interactable.transform.rotation = Quaternion.identity;
 
-        attached = true;
+            if (interactable.TryGetComponent<Interactable>(out interactableObject)) { }
+
+
+            if (leftHand != null)
+            {
+                lBoneConstraint.weight = 1.0f;
+                lTarget = leftHand;
+            }
+            if (rightHand != null)
+            {
+                rBoneConstraint.weight = 1.0f;
+                rTarget = rightHand;
+            }
+
+            attached = true;
+
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public void FixedUpdate()
