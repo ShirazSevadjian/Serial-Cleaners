@@ -25,7 +25,7 @@ public class BodybagInteraction : Interactable
             if (player.GetComponent<PlayerInteractable>().Attach(this.gameObject, leftHandPosition, rightHandPosition))
             {
                 _collider.enabled = false;
-                _rigidbody.useGravity = true;
+                _rigidbody.useGravity = false;
                 //_rigidbody.isKinematic = true; // The ragdoll should not be kinematic.
                 canvas.SetActive(false);
 
