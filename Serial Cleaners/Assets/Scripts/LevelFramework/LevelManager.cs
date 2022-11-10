@@ -1,38 +1,33 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Audio;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
     // Singleton pattern.
     public static LevelManager Instance { get; private set; }
-
+    
     // Level info scriptable object.
     [SerializeField] private LevelParameters currentLvl;
 
     // Pause effect.
-    [Header("UI")]
     [SerializeField] private GameObject pausePannel;
-    [SerializeField] private GameObject mainPausePanel;
-    [SerializeField] private GameObject optionsPausePanel;
 
     // Parameters.
     [SerializeField] private float remainingTimerDuration;
-    
-    private bool gamePaused;
+    public bool gamePaused;
     // Other stuff
 
-    [Header("AUDIO")]
-    [SerializeField] private AudioMixer master;
-
-    private AsyncOperation async;
-
     // Is the level currently running?
-    private bool isLevelActive = false;
+    bool isLevelActive = false;
+
 
     public float difficultyMultiplier = 1; // Temporary, integrate difficulty as its own thing.
+
+
+
 
     // EVENTS.
     public UnityEvent_float levelStartEvent;
@@ -104,6 +99,7 @@ public class LevelManager : MonoBehaviour
                 ResumeGame();
             else PauseGame();
         }
+       
     }
 
 
@@ -128,7 +124,7 @@ public class LevelManager : MonoBehaviour
         ResetParameters(currentLvl);
     }
 
-
+    
     // These are public so that other scripts can call them using the level manager's instance.
     // Start of level method.
     public void StartLevel(bool resetTimer = false)
@@ -212,42 +208,8 @@ public class LevelManager : MonoBehaviour
     {
         Time.timeScale = 1;
         pausePannel.SetActive(false);
-        mainPausePanel.SetActive(true);
-        optionsPausePanel.SetActive(false);
 
         gamePaused = false;
         Debug.Log("The game has resumed.");
-    }
-
-    public void MasterVolume(float volume)
-    {
-        master.SetFloat("MasterVolume", volume);
-    }
-
-    public void FullScreenToggle(bool toggle)
-    {
-        Screen.fullScreen = toggle;
-    }
-
-    public void SetQuality(int index)
-    {
-        QualitySettings.SetQualityLevel(index);
-    }
-
-    public void LoadLevel(int levelIndex)
-    {
-        if (async == null)
-        {
-            async = SceneManager.LoadSceneAsync(levelIndex);
-            async.allowSceneActivation = true;
-        }
-    }
-
-    public void Quit()
-    {
-        Application.Quit();
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#endif
     }
 }
