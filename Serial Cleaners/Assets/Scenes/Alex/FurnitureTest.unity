@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1181,6 +1181,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7995179518529311369, guid: 460dd88b0a22ecf40b7898e11a15e328, type: 3}
   m_PrefabInstance: {fileID: 944555755}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &643232599
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7313382913321224377, guid: e6f7cd80221257947b05902893ab1971, type: 3}
+      propertyPath: m_Name
+      value: Bodybag
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313382913321224378, guid: e6f7cd80221257947b05902893ab1971, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313382913321224378, guid: e6f7cd80221257947b05902893ab1971, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313382913321224378, guid: e6f7cd80221257947b05902893ab1971, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313382913321224378, guid: e6f7cd80221257947b05902893ab1971, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313382913321224378, guid: e6f7cd80221257947b05902893ab1971, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313382913321224378, guid: e6f7cd80221257947b05902893ab1971, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313382913321224378, guid: e6f7cd80221257947b05902893ab1971, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313382913321224378, guid: e6f7cd80221257947b05902893ab1971, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313382913321224378, guid: e6f7cd80221257947b05902893ab1971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313382913321224378, guid: e6f7cd80221257947b05902893ab1971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313382913321224378, guid: e6f7cd80221257947b05902893ab1971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e6f7cd80221257947b05902893ab1971, type: 3}
 --- !u!4 &643827095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2412161367050800168, guid: 460dd88b0a22ecf40b7898e11a15e328, type: 3}
@@ -2954,6 +3011,14 @@ PrefabInstance:
       propertyPath: m_Sources.Array.data[0].sourceTransform
       value: 
       objectReference: {fileID: 172656653}
+    - target: {fileID: 2682300972588391345, guid: cc988f450d73805469b2b0f77404c987, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.22680655
+      objectReference: {fileID: 0}
+    - target: {fileID: 2682300972588391345, guid: cc988f450d73805469b2b0f77404c987, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0025306141
+      objectReference: {fileID: 0}
     - target: {fileID: 3034401735466998454, guid: cc988f450d73805469b2b0f77404c987, type: 3}
       propertyPath: m_Camera
       value: 
@@ -3233,6 +3298,8 @@ MonoBehaviour:
   interactionPositon: {fileID: 1454638647}
   leftHand: {fileID: 261145537}
   rightHand: {fileID: 333639684}
+  leftHandBone: {fileID: 0}
+  rightHandBone: {fileID: 0}
   lBoneConstraint: {fileID: 2093233875}
   rBoneConstraint: {fileID: 1728840164}
 --- !u!1 &2056157435

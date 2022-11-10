@@ -328,6 +328,8 @@ MonoBehaviour:
   interactionPositon: {fileID: 8041733829388968472}
   leftHand: {fileID: 1900481538947822328}
   rightHand: {fileID: 1803482079424804756}
+  leftHandBone: {fileID: 8617910108690792201}
+  rightHandBone: {fileID: 3751849819862881538}
   lBoneConstraint: {fileID: 5695450566139540146}
   rBoneConstraint: {fileID: 5191483480883796161}
 --- !u!54 &3288915540872721178

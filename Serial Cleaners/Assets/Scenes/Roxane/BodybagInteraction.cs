@@ -31,6 +31,8 @@ public class BodybagInteraction : Interactable
                 canvas.SetActive(false);
 
                 // Manhandle the ragdoll.
+
+                _rigidbodyGrabPoint.isKinematic = true;
                 
             }
         }
@@ -43,7 +45,7 @@ public class BodybagInteraction : Interactable
         //_rigidbody.isKinematic = false; 
         canvas.SetActive(true);
 
-
+        _rigidbodyGrabPoint.isKinematic = false;
 
     }
 
