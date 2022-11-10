@@ -15,9 +15,8 @@ public class BodybagInteraction : Interactable
     {
         base.Awake();
         _rigidbody = GetComponentInChildren<Rigidbody>();
-
-
     }
+
 
     protected override void Interact()
     {
@@ -32,7 +31,7 @@ public class BodybagInteraction : Interactable
 
                 // Manhandle the ragdoll.
 
-                _rigidbodyGrabPoint.isKinematic = true;
+                //_rigidbodyGrabPoint.isKinematic = true;
                 
             }
         }
@@ -45,7 +44,7 @@ public class BodybagInteraction : Interactable
         //_rigidbody.isKinematic = false; 
         canvas.SetActive(true);
 
-        _rigidbodyGrabPoint.isKinematic = false;
+        //_rigidbodyGrabPoint.isKinematic = false;
 
     }
 
