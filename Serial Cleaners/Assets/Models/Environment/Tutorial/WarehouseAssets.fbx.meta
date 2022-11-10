@@ -1,84 +1,9 @@
 fileFormatVersion: 2
 guid: 368884ddd19f7c143b96d96f9a761080
 ModelImporter:
-  serializedVersion: 20300
+  serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BoxLabel
-    second: {fileID: 2100000, guid: 36391acc1e055f547a285b6f3bc53c9b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cardboard1
-    second: {fileID: 2100000, guid: 47d86c38e0e36144a9282c61d168cf21, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cardboard2
-    second: {fileID: 2100000, guid: 3b634286fc4de8240a6105c138b72d18, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cardboard3
-    second: {fileID: 2100000, guid: 7333206075339f24cb8350c04af06809, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cardboard4
-    second: {fileID: 2100000, guid: ccc128097348a0b4c831d4f68fb58b68, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: DoorHandle
-    second: {fileID: 2100000, guid: ffc50c15c71cb6b4a9a007c971411e74, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Logo
-    second: {fileID: 2100000, guid: f6061a0e7e2770946805506d8dc06308, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 6457b5bbab8246149b67bcc42076037c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Rim
-    second: {fileID: 2100000, guid: eaa908fa8ae709742bd249b0e49729c5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Tape
-    second: {fileID: 2100000, guid: 06243cebba1b41f4e9a34c1457be5537, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Tire
-    second: {fileID: 2100000, guid: fe93b4babc3b64645af93e80495332d8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: VanBody
-    second: {fileID: 2100000, guid: 6a4120c9d1c1df241b29f2617c8b1a86, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Windows
-    second: {fileID: 2100000, guid: dbfeb6062546c9b4b81963841033d9de, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WoodPalette
-    second: {fileID: 2100000, guid: 130e0d186f5cac54a82e3cd7a2b0fa1a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WoodPaletteLight
-    second: {fileID: 2100000, guid: 8310b264979b526438b9fb5d61382ea9, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -116,8 +41,8 @@ ModelImporter:
     sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -148,7 +73,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 1
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
     human: []
@@ -163,15 +88,14 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

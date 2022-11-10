@@ -65,6 +65,34 @@ public class PlayerInteractable : MonoBehaviour
         }
     }
 
+    public bool AttachHandsOnly(GameObject interactable, Transform leftHand, Transform rightHand)
+    {
+        if (interactableObject == null)
+        {
+            if (interactable.TryGetComponent<Interactable>(out interactableObject)) { }
+
+
+            if (leftHand != null)
+            {
+                lBoneConstraint.weight = 1.0f;
+                lTarget = leftHand;
+            }
+            if (rightHand != null)
+            {
+                rBoneConstraint.weight = 1.0f;
+                rTarget = rightHand;
+            }
+
+            attached = true;
+
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public void FixedUpdate()
     {
         if (attached)
