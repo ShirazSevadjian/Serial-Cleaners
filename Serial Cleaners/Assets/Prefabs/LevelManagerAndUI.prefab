@@ -30,7 +30,7 @@ RectTransform:
   - {fileID: 3265988233324834831}
   - {fileID: 3749040684473260976}
   m_Father: {fileID: 5944691371478843887}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -371,7 +371,7 @@ RectTransform:
   - {fileID: 9040647503058191089}
   - {fileID: 1052604176909320101}
   m_Father: {fileID: 3888967967259051390}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -647,11 +647,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8809653065638477737}
   - {fileID: 4505597742383963736}
   - {fileID: 8646871775667162312}
   m_Father: {fileID: 5944691371478843887}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -728,7 +727,7 @@ RectTransform:
   m_Children:
   - {fileID: 9216635229657526391}
   m_Father: {fileID: 5944691371478843887}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -919,8 +918,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 462246119393136521}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 1885500215353258900}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: MasterVolume
         m_Mode: 0
         m_Arguments:
@@ -1077,7 +1076,6 @@ GameObject:
   - component: {fileID: 3218288695872510688}
   - component: {fileID: 3043103847127185026}
   - component: {fileID: 1130296141410902165}
-  - component: {fileID: 462246119393136521}
   - component: {fileID: 8050026421379239155}
   - component: {fileID: 1885500215353258900}
   m_Layer: 5
@@ -1099,11 +1097,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 8294258228099789677}
-  - {fileID: 3888967967259051390}
   - {fileID: 1348981296850397092}
   - {fileID: 8640637231545012775}
   - {fileID: 2205257595724292304}
   - {fileID: 5222020853762659447}
+  - {fileID: 3888967967259051390}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1173,19 +1171,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &462246119393136521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1597727068153478711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a9d4746a5974e540aeccfb5bf9576bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  master: {fileID: 0}
 --- !u!114 &8050026421379239155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1215,8 +1200,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLvl: {fileID: 11400000, guid: 5e4dced0aa6066c40b07af14ed818899, type: 2}
   pausePannel: {fileID: 844330803485743089}
+  mainPausePanel: {fileID: 3418758235256635164}
+  optionsPausePanel: {fileID: 381191428264278600}
   remainingTimerDuration: 60
-  gamePaused: 0
+  master: {fileID: 24100000, guid: 52028c25db2db644394017c3860b57a6, type: 2}
   difficultyMultiplier: 1
   levelStartEvent:
     m_PersistentCalls:
@@ -1902,8 +1889,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 462246119393136521}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 1885500215353258900}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: SetQuality
         m_Mode: 0
         m_Arguments:
@@ -1942,12 +1929,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 8809653065638477737}
   - {fileID: 6888381148982886214}
   - {fileID: 4848842546522312182}
   - {fileID: 5668766258766946158}
   - {fileID: 7228476639448202091}
   m_Father: {fileID: 3888967967259051390}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2172,8 +2160,8 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 462246119393136521}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 1885500215353258900}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: FullScreenToggle
         m_Mode: 0
         m_Arguments:
@@ -2762,7 +2750,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5944691371478843887}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -3111,7 +3099,7 @@ RectTransform:
   m_Children:
   - {fileID: 7483245512322985128}
   m_Father: {fileID: 4505597742383963736}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3244,7 +3232,7 @@ RectTransform:
   m_Children:
   - {fileID: 7400105514047563399}
   m_Father: {fileID: 4505597742383963736}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3333,8 +3321,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 462246119393136521}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 1885500215353258900}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -3452,7 +3440,7 @@ RectTransform:
   m_Children:
   - {fileID: 4364869446598486268}
   m_Father: {fileID: 5944691371478843887}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3578,11 +3566,11 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6501975031227324614}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3888967967259051390}
+  m_Father: {fileID: 4505597742383963736}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
@@ -4106,7 +4094,7 @@ RectTransform:
   m_Children:
   - {fileID: 5122759799234684986}
   m_Father: {fileID: 4505597742383963736}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4195,7 +4183,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 844330803485743089}
+      - m_Target: {fileID: 3418758235256635164}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -4385,7 +4373,7 @@ RectTransform:
   m_Children:
   - {fileID: 1705341874910543029}
   m_Father: {fileID: 4505597742383963736}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4474,9 +4462,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 462246119393136521}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: SetQuality
+      - m_Target: {fileID: 1885500215353258900}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: LoadLevel
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4818,7 +4806,7 @@ PrefabInstance:
     - target: {fileID: 3562931901077792959, guid: d4488dae0c68bb44094fa86ed4019500, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 844330803485743089}
+      objectReference: {fileID: 3418758235256635164}
     - target: {fileID: 3562931901077792959, guid: d4488dae0c68bb44094fa86ed4019500, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2

@@ -20,6 +20,8 @@ public class PlayerInteractable : MonoBehaviour
 
 
 
+    public Interactable InteractableObject { get => interactableObject; }
+
     private Interactable interactableObject;
     //private MopInteraction mopInteraction;
 
@@ -33,15 +35,29 @@ public class PlayerInteractable : MonoBehaviour
         {
             if (interactableObject != null)
             {
-                lBoneConstraint.weight = 0.0f;
-                rBoneConstraint.weight = 0.0f;
-                attached = false;
-
-                interactableObject.Detach();
-                interactableObject.transform.SetParent(null);
-                interactableObject = null;
+                Detach();
             }
         }
+
+        if (interactableObject != null)
+        {
+            interactableObject.transform.localPosition = Vector3.zero;
+            interactableObject.transform.rotation = Quaternion.identity;
+        }
+    }
+
+    public Interactable Detach()
+    {
+        Interactable reference;
+        lBoneConstraint.weight = 0.0f;
+        rBoneConstraint.weight = 0.0f;
+        attached = false;
+
+        interactableObject.Detach();
+        interactableObject.transform.SetParent(null);
+        reference = interactableObject;
+        interactableObject = null;
+        return reference;
     }
 
     public bool Attach(GameObject interactable, Transform leftHand, Transform rightHand)
