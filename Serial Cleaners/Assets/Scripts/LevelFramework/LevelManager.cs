@@ -23,13 +23,8 @@ public class LevelManager : MonoBehaviour
     // Is the level currently running?
     bool isLevelActive = false;
 
-   
+
     public float difficultyMultiplier = 1; // Temporary, integrate difficulty as its own thing.
-
-
-    private bool wasBloodCleaned = false;
-    public bool WasBloodCleaned { get { return wasBloodCleaned; } set { wasBloodCleaned = value; } }
-
 
 
 
@@ -147,14 +142,8 @@ public class LevelManager : MonoBehaviour
 
             isLevelActive = true;
             levelStartEvent.Invoke(remainingTimerDuration);
-
-
-            // Reset win paramters.
-            wasBloodCleaned = false;
         }
     }
-
-
 
     // End of level method.
     public void EndLevel()
@@ -172,30 +161,8 @@ public class LevelManager : MonoBehaviour
             Debug.Log(string.Format("There are {0} seconds left to the timer.", remainingTimerDuration));
 
             // Do checks. Was everything properly cleaned up?
-            if (VictoryConditionsMet())
-                DoVictory();
-            
-                
         }
     }
-
-
-
-    private bool VictoryConditionsMet()
-    {
-        return WasBloodCleaned;
-    }
-
-    private void DoVictory()
-    {
-        
-    }
-
-    private void DoFailure()
-    {
-
-    }
-
 
 
 
