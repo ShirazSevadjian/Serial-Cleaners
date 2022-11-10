@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class BloodManager : MonoBehaviour
 {
     [SerializeField] private UnityEvent onPuddlesDone;
+    [SerializeField] private UnityEvent onOnePuddleDonce;
     [SerializeField] private List<GameObject> bloodPuddles;
 
     public static BloodManager Instance { get; private set; }
@@ -17,6 +18,7 @@ public class BloodManager : MonoBehaviour
         if (puddle == null) return; 
 
         bloodPuddles.Remove(puddle.gameObject);
+        onOnePuddleDonce.Invoke();
 
         if (bloodPuddles.Count == 0)
         {

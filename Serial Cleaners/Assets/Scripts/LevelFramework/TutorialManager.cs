@@ -13,6 +13,13 @@ public class TutorialManager : MonoBehaviour
 
     bool didPressE;
 
+    private bool bodyPickedUp = false;
+    private bool mopPickedUp = false;
+    private bool onePuddleCleaned = false;
+
+    [SerializeField] private GameObject body;
+    [SerializeField] private GameObject mop;
+
     void Start()
     {
         popUpIndex = 0;
@@ -105,10 +112,47 @@ public class TutorialManager : MonoBehaviour
         popUpIndex++;
         UpdateTutorial();
 
-        yield return new WaitUntil(() => Input.GetButtonDown("Submit"));
+        yield return new WaitUntil(() => bodyPickedUp);
 
+        popUpIndex++;
+        UpdateTutorial();
+
+        yield return new WaitUntil(() => body == null);
+
+        popUpIndex++;
+        UpdateTutorial();
+
+        yield return new WaitUntil(() => mopPickedUp);
+
+        mop.GetComponent<TutorialAction>().enabled = true;
+        popUpIndex++;
+        UpdateTutorial();
+
+        yield return new WaitUntil(() => onePuddleCleaned);
+        
+        popUpIndex++;
+        UpdateTutorial();
+
+        yield return new WaitForSeconds(5.0f);
+
+        popUpIndex++;
+        UpdateTutorial();
     }
 
+    public void InteractedWithBody()
+    {
+        bodyPickedUp = true;
+    }
+
+    public void InteractedWithMop()
+    {
+        mopPickedUp = true;
+    }
+
+    public void PuddleCleaned()
+    {
+        onePuddleCleaned = true;
+    }
 
     void UpdateTutorial()
     {
