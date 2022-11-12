@@ -17,6 +17,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject pausePannel;
     [SerializeField] private GameObject mainPausePanel;
     [SerializeField] private GameObject optionsPausePanel;
+    [SerializeField] private TMPro.TMP_Text timeRemaining_Txt;
 
     // Parameters.
     [SerializeField] private float remainingTimerDuration;
@@ -40,6 +41,9 @@ public class LevelManager : MonoBehaviour
     public UnityEvent victoryEvent;
     public UnityEvent defeatEvent;
     public UnityEvent_float levelTimerTick;
+
+    private bool allBodies = false;
+    private bool allPuddlesCleaned = false;
 
     void LevelEventListener() { Debug.Log("There was an event."); }
     void LevelEventListener(string message) { Debug.Log("There was an event. " + message); }
@@ -155,7 +159,7 @@ public class LevelManager : MonoBehaviour
         if (isLevelActive)
         {
             isLevelActive = false;
-
+            Time.timeScale = 0.0f;
             // Emit end of level event in case other scripts need it.
             levelEndEvent.Invoke("The level has ended.");
 
@@ -163,12 +167,18 @@ public class LevelManager : MonoBehaviour
             if (timerDecreaseCoroutine != null)
                 StopCoroutine(timerDecreaseCoroutine);
             Debug.Log(string.Format("There are {0} seconds left to the timer.", remainingTimerDuration));
-
+            timeRemaining_Txt.text = remainingTimerDuration.ToString() + "s";
             // Do checks. Was everything properly cleaned up?
         }
     }
 
-
+    public void LevelChecker()
+    {
+        if (BloodManager.Instance.AllPuddlesCleaned && BodyManager.Instance.AllBodiesCleaned)
+        {
+            EndLevel();
+        }
+    }
 
     // TIMER.
     private void SetTimerDuration(float baseLevelDuration)

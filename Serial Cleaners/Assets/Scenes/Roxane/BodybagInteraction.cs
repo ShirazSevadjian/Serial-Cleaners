@@ -43,7 +43,11 @@ public class BodybagInteraction : Interactable
         canvas.SetActive(true);
 
         //_rigidbodyGrabPoint.isKinematic = false;
+    }
 
+    private void OnDestroy()
+    {
+        BodyManager.Instance.RemoveBody(gameObject);
     }
 
 }

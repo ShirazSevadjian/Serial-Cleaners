@@ -14,6 +14,7 @@ public class TutorialManager : MonoBehaviour
     bool didPressE;
 
     private bool bodyPickedUp = false;
+    private bool bodyDestroyed = false;
     private bool mopPickedUp = false;
     private bool onePuddleCleaned = false;
 
@@ -117,21 +118,22 @@ public class TutorialManager : MonoBehaviour
         popUpIndex++;
         UpdateTutorial();
 
-        yield return new WaitUntil(() => body == null);
+        yield return new WaitUntil(() => bodyDestroyed);
 
         popUpIndex++;
         UpdateTutorial();
+        mop.GetComponent<TutorialAction>().enabled = true;
 
         yield return new WaitUntil(() => mopPickedUp);
 
-        mop.GetComponent<TutorialAction>().enabled = true;
-        popUpIndex++;
-        UpdateTutorial();
+        //popUpIndex++;
+        //UpdateTutorial();
 
         yield return new WaitUntil(() => onePuddleCleaned);
-        
+
         popUpIndex++;
         UpdateTutorial();
+        LevelManager.Instance.StartLevel();
 
         yield return new WaitForSeconds(5.0f);
 
@@ -142,6 +144,11 @@ public class TutorialManager : MonoBehaviour
     public void InteractedWithBody()
     {
         bodyPickedUp = true;
+    }
+
+    public void BodyDestroyed()
+    {
+        bodyDestroyed = true;
     }
 
     public void InteractedWithMop()

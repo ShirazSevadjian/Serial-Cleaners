@@ -10,8 +10,9 @@ public class BloodManager : MonoBehaviour
     [SerializeField] private List<GameObject> bloodPuddles;
 
     public static BloodManager Instance { get; private set; }
+    public bool AllPuddlesCleaned { get; private set; }
 
-    private void Awake() { if (Instance != null && Instance != this) Destroy(gameObject); else Instance = this; }
+    private void Awake() { if (Instance != null && Instance != this) Destroy(gameObject); else Instance = this;  AllPuddlesCleaned = false; }
 
     public void RemovePuddle(BloodPuddle puddle)
     {
@@ -23,6 +24,7 @@ public class BloodManager : MonoBehaviour
         if (bloodPuddles.Count == 0)
         {
             onPuddlesDone.Invoke();
+            AllPuddlesCleaned = true;
         }
     }
 }
