@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Blood
   - Mop
-  - Destroyable
   layers:
   - Default
   - TransparentFX
@@ -17,8 +16,8 @@ TagManager:
   - Floor
   - Blood
   - PostProcessing
-  - Player
-  - Interactable
+  - 
+  - 
   - 
   - 
   - 
