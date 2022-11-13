@@ -235,12 +235,8 @@ GameObject:
   - component: {fileID: 5325749924072973421}
   - component: {fileID: 8637366350711061179}
   - component: {fileID: 754058951}
-<<<<<<< Updated upstream
+  - component: {fileID: 292761999}
   m_Layer: 0
-=======
-  - component: {fileID: 7236954635655132316}
-  m_Layer: 9
->>>>>>> Stashed changes
   m_Name: PlayerOne
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -376,7 +372,7 @@ MonoBehaviour:
   speed: 10
   rotationSpeed: 300
   myAnimator: {fileID: 1766054265895578620}
---- !u!114 &7236954635655132316
+--- !u!114 &292761999
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -415,20 +411,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1256445823, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
-        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
-        m_MethodName: PlayerMove
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_ActionId: a2cab811-b651-46ef-8276-afced137daa7
-    m_ActionName: Gameplay/Move[/XInputControllerWindows/leftStick]
+    m_ActionName: Gameplay/Move
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 754058951}
@@ -444,23 +428,15 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: a8201160-ebac-49b4-96f2-23a8a87c1fc7
-    m_ActionName: Gameplay/Look[/XInputControllerWindows/rightStick]
+    m_ActionName: Gameplay/Look
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1256445823, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
-        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
-        m_MethodName: PlayerSubmit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 959f2071-ce0a-44cf-ad87-8e513d09aff2
-    m_ActionName: Gameplay/Submit[/XInputControllerWindows/buttonSouth]
+    m_ActionName: Gameplay/Submit
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f14b41b3-a28b-4abf-a85c-7fbcd7f00918
+    m_ActionName: Gameplay/Pickup
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay

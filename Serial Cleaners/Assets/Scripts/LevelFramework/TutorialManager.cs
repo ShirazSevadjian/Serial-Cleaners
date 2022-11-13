@@ -20,7 +20,6 @@ public class TutorialManager : MonoBehaviour
     private bool mopPickedUp = false;
     private bool onePuddleCleaned = false;
 
-    [SerializeField] private GameObject body;
     [SerializeField] private GameObject mop;
 
     void Start()
