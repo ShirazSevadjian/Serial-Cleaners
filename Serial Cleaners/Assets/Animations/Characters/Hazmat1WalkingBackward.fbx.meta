@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 871aa28450218f240a06754c1eb0ba25
+guid: 38a3367b33d16014a968ccde315a96dc
 ModelImporter:
   serializedVersion: 20300
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Hazmat1IdleStanding
+    second: Hazmat1WalkingBackward
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Hazmat1IdleStanding
+      name: Hazmat1WalkingBackward
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 180
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
