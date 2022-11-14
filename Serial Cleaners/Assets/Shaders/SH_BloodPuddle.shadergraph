@@ -1300,7 +1300,7 @@
     },
     "m_Name": "BloodColor",
     "m_DefaultReferenceName": "Color_5c10dad63dbf4c14a47db024c01f3329",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_BColor",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,

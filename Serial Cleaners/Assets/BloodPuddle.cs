@@ -1,20 +1,24 @@
+using System.Collections;
 using UnityEngine;
 
 public class BloodPuddle : MonoBehaviour
 {
     [SerializeField] private Texture2D maskBaseTexture;
-    [SerializeField] private Texture2D brushTexture;
 
     [SerializeField] private float threshold = 0.1f;
+    [SerializeField] private float bloodAge = 10.0f;
 
+    private BloodManager bloodManager;
     private Material material;
+    private Texture2D brushTexture;
     private Texture2D templateMask;
+    private Coroutine ageCoroutine;
 
+    private bool aged;
     private float bloodAmountTotal;
     private float bloodRemaining;
     private float bloodPercentange;
 
-    private BloodManager bloodManager;
 
     private void Awake()
     {
@@ -24,6 +28,7 @@ public class BloodPuddle : MonoBehaviour
     private void Start()
     {
         bloodManager = BloodManager.Instance;
+        brushTexture = bloodManager.BrushTexture;
 
         bloodAmountTotal = 0.0f;
         for (int x = 0; x < maskBaseTexture.width; x++)
@@ -37,6 +42,8 @@ public class BloodPuddle : MonoBehaviour
         bloodRemaining = bloodAmountTotal;
 
         CreateTexture();
+
+        ageCoroutine = StartCoroutine(AgePuddle());
     }
 
     private void OnTriggerStay(Collider other)
@@ -81,10 +88,6 @@ public class BloodPuddle : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
-    }
-
     private void CreateTexture()
     {
         templateMask = new Texture2D(maskBaseTexture.width, maskBaseTexture.height);
@@ -92,5 +95,15 @@ public class BloodPuddle : MonoBehaviour
         templateMask.Apply();
 
         material.SetTexture("_MaskTexture", templateMask);
+    }
+
+    private IEnumerator AgePuddle()
+    {
+        while (bloodAge > 0)
+        {
+            bloodAge--;
+            material.SetVector("_BColor", bloodManager.ColorGradient.Evaluate(bloodAge / 10));
+            yield return new WaitForSeconds(-1.0f); 
+        }
     }
 }
