@@ -59,6 +59,7 @@ public abstract class Interactable : MonoBehaviour
         {
             if (player.GetComponent<PlayerInteractable>().Attach(this.gameObject, leftHandPosition, rightHandPosition))
             {
+                transform.GetChild(0).gameObject.layer = LayerMask.NameToLayer("InteractableObject");
                 _collider.enabled = false;
                 _rigidbody.useGravity = false;
                 _rigidbody.isKinematic = true;
@@ -69,6 +70,7 @@ public abstract class Interactable : MonoBehaviour
 
     public virtual void Detach()
     {
+        transform.GetChild(0).gameObject.layer = LayerMask.NameToLayer("Default");
         _collider.enabled = true;
         _rigidbody.useGravity = true;
         _rigidbody.isKinematic = false;

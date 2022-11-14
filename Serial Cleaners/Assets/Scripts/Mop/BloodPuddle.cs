@@ -14,7 +14,7 @@ public class BloodPuddle : MonoBehaviour
     private Texture2D templateMask;
     private Coroutine ageCoroutine;
 
-    private bool aged;
+    private bool aged = false;
     private float bloodAmountTotal;
     private float bloodRemaining;
     private float bloodPercentange;
@@ -50,40 +50,43 @@ public class BloodPuddle : MonoBehaviour
     {
         if (other.CompareTag("Mop"))
         {
-            Ray ray = new Ray(other.transform.position, -Vector3.up);
-            if (Physics.Raycast(ray, out RaycastHit hitInfo, 2.0f))
+            if (!aged || other.GetComponent<MopCleaner>().wet)
             {
-                Vector2 textureCoord = hitInfo.textureCoord;
-                int pixelX = (int)(textureCoord.x * templateMask.width);
-                int pixelY = (int)(textureCoord.y * templateMask.height);
-
-                int pixelXOffset = pixelX - (brushTexture.width / 2);
-                int pixelYOffset = pixelY - (brushTexture.height / 2);
-
-                for (int x = 0; x < brushTexture.width; x++)
+                Ray ray = new Ray(other.transform.position, -Vector3.up);
+                if (Physics.Raycast(ray, out RaycastHit hitInfo, 2.0f))
                 {
-                    for (int y = 0; y < brushTexture.height; y++)
+                    Vector2 textureCoord = hitInfo.textureCoord;
+                    int pixelX = (int)(textureCoord.x * templateMask.width);
+                    int pixelY = (int)(textureCoord.y * templateMask.height);
+
+                    int pixelXOffset = pixelX - (brushTexture.width / 2);
+                    int pixelYOffset = pixelY - (brushTexture.height / 2);
+
+                    for (int x = 0; x < brushTexture.width; x++)
                     {
-                        Color pixel = brushTexture.GetPixel(x, y);
-                        Color pixelMask = templateMask.GetPixel(pixelXOffset + x, pixelYOffset + y);
-
-                        if (pixelMask.g == 1 && pixel.g <= 0.1f)
+                        for (int y = 0; y < brushTexture.height; y++)
                         {
-                            bloodRemaining--;
-                            bloodPercentange = bloodRemaining / bloodAmountTotal;
+                            Color pixel = brushTexture.GetPixel(x, y);
+                            Color pixelMask = templateMask.GetPixel(pixelXOffset + x, pixelYOffset + y);
 
-                            if (bloodPercentange < threshold)
+                            if (pixelMask.g == 1 && pixel.g <= 0.1f)
                             {
-                                bloodManager.RemovePuddle(this);
-                                Destroy(gameObject);
+                                bloodRemaining--;
+                                bloodPercentange = bloodRemaining / bloodAmountTotal;
+
+                                if (bloodPercentange < threshold)
+                                {
+                                    bloodManager.RemovePuddle(this);
+                                    Destroy(gameObject);
+                                }
                             }
+
+                            templateMask.SetPixel(pixelXOffset + x, pixelYOffset + y, new Color(0.0f, pixel.g * pixelMask.g, 0.0f));
                         }
-
-                        templateMask.SetPixel(pixelXOffset + x, pixelYOffset + y, new Color(0.0f, pixel.g * pixelMask.g, 0.0f));
                     }
-                }
 
-                templateMask.Apply();
+                    templateMask.Apply();
+                } 
             }
         }
     }
@@ -101,9 +104,17 @@ public class BloodPuddle : MonoBehaviour
     {
         while (bloodAge > 0)
         {
-            bloodAge--;
+            bloodAge -= 0.1f;
             material.SetVector("_BColor", bloodManager.ColorGradient.Evaluate(bloodAge / 10));
-            yield return new WaitForSeconds(-1.0f); 
+            yield return new WaitForSeconds(0.2f);
         }
+
+        bloodAge = 0;
+        aged = true;
+    }
+
+    private void OnDestroy()
+    {
+        if (ageCoroutine != null) StopCoroutine(ageCoroutine);
     }
 }
