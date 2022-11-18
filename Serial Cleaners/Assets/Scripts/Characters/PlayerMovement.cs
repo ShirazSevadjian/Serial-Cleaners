@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 
-public class Player1Input : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 10;
     [SerializeField] private float rotationSpeed = 300;

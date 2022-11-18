@@ -229,13 +229,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5325749924072973395}
-  - component: {fileID: 5325749924072973392}
-  - component: {fileID: 5325749924072973393}
   - component: {fileID: 5325749924072973398}
   - component: {fileID: 5325749924072973421}
   - component: {fileID: 8637366350711061179}
   - component: {fileID: 754058951}
-  - component: {fileID: 292761999}
   m_Layer: 0
   m_Name: PlayerOne
   m_TagString: Player
@@ -259,55 +256,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!33 &5325749924072973392
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5325749924072973399}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &5325749924072973393
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5325749924072973399}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &5325749924072973398
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -372,76 +320,6 @@ MonoBehaviour:
   speed: 10
   rotationSpeed: 300
   myAnimator: {fileID: 1766054265895578620}
---- !u!114 &292761999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5325749924072973399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: db771b853c6470845887cf89c8c72e9c, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 754058951}
-        m_TargetAssemblyTypeName: Player1Input, Assembly-CSharp
-        m_MethodName: Move
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: a2cab811-b651-46ef-8276-afced137daa7
-    m_ActionName: Gameplay/Move
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 754058951}
-        m_TargetAssemblyTypeName: Player1Input, Assembly-CSharp
-        m_MethodName: Look
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: a8201160-ebac-49b4-96f2-23a8a87c1fc7
-    m_ActionName: Gameplay/Look
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 959f2071-ce0a-44cf-ad87-8e513d09aff2
-    m_ActionName: Gameplay/Submit
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f14b41b3-a28b-4abf-a85c-7fbcd7f00918
-    m_ActionName: Gameplay/Pickup
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Gameplay
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1 &6807667214201394903
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,6 +573,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 460dd88b0a22ecf40b7898e11a15e328, type: 3}
+--- !u!1 &4983712956371528508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 460dd88b0a22ecf40b7898e11a15e328, type: 3}
+  m_PrefabInstance: {fileID: 5325749923201963629}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7534920943383059013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2412161367050800168, guid: 460dd88b0a22ecf40b7898e11a15e328, type: 3}
@@ -733,11 +616,6 @@ Animator:
 --- !u!4 &5648187022577840518 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 460dd88b0a22ecf40b7898e11a15e328, type: 3}
-  m_PrefabInstance: {fileID: 5325749923201963629}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4983712956371528508 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 460dd88b0a22ecf40b7898e11a15e328, type: 3}
   m_PrefabInstance: {fileID: 5325749923201963629}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &8466387712967442613
