@@ -27,6 +27,21 @@ public class LevelManager : MonoBehaviour
     bool isLevelActive = false;
 
 
+
+    // Housekeeping.
+    private bool wasBloodCleaned = false;
+    private bool wereBodiesRemoved = false;
+    private bool wasFurnitureReplaced = false;
+
+    public bool WasBloodCleaned { get { return wasBloodCleaned; } set { wasBloodCleaned = value; } }
+    public bool WereBodiesRemoved { get { return wereBodiesRemoved; } set { wereBodiesRemoved = value; } }
+    public bool WasFurnitureReplaced { get { return wasFurnitureReplaced; } set { wasFurnitureReplaced = value; } }
+
+
+
+
+
+
     public float difficultyMultiplier = 1; // Temporary, integrate difficulty as its own thing.
 
 
@@ -148,6 +163,12 @@ public class LevelManager : MonoBehaviour
 
             isLevelActive = true;
             levelStartEvent.Invoke(remainingTimerDuration);
+
+
+            // Reset win paramters.
+            WasBloodCleaned = false;
+            WereBodiesRemoved = false;
+            WasFurnitureReplaced = false;
         }
     }
 
@@ -165,11 +186,20 @@ public class LevelManager : MonoBehaviour
             if (timerDecreaseCoroutine != null)
                 StopCoroutine(timerDecreaseCoroutine);
             Debug.Log(string.Format("There are {0} seconds left to the timer.", remainingTimerDuration));
+<<<<<<< Updated upstream
             timeRemaining_Txt.text = remainingTimerDuration.ToString() + "s";
+=======
+
+
+>>>>>>> Stashed changes
             // Do checks. Was everything properly cleaned up?
+            if (VictoryConditionsMet())
+                DoVictory();
+            else DoFailure();
         }
     }
 
+<<<<<<< Updated upstream
     public void LevelChecker()
     {
         if (BloodManager.Instance.AllPuddlesCleaned && BodyManager.Instance.AllBodiesCleaned)
@@ -177,6 +207,25 @@ public class LevelManager : MonoBehaviour
             EndLevel();
         }
     }
+=======
+
+    private bool VictoryConditionsMet()
+    {
+        return WasBloodCleaned && WereBodiesRemoved && WasFurnitureReplaced;
+    }
+
+    private void DoVictory()
+    {
+        victoryEvent.Invoke();
+    }
+
+    private void DoFailure()
+    {
+        defeatEvent.Invoke();
+    }
+
+
+>>>>>>> Stashed changes
 
     // TIMER.
     private void SetTimerDuration(float baseLevelDuration)
