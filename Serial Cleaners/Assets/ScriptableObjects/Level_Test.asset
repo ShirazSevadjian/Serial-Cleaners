@@ -14,3 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvlName: Test Level
   baseLvlDuration: 31
+  tasksInvolved:
+  - taskReference: {fileID: 11400000, guid: f3eac03a0e3583640b642644d13f3dba, type: 2}
+    doTaskXTimes: 3
+  - taskReference: {fileID: 11400000, guid: d4a131bd4607c884e85b8a244d8a6d12, type: 2}
+    doTaskXTimes: 2

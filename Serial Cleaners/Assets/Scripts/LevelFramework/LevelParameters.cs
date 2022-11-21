@@ -8,10 +8,21 @@ public class LevelParameters : ScriptableObject
 {
     public string lvlName; // The level's name as a string.
     
-    public float baseLvlDuration; // The level's time duration in second.
-    // will be alterable by difficulty setting.
+    public float baseLvlDuration; // The level's base time duration in second.
 
-    // bools or list of tasks included?
+    // Tasks included.
+    public TaskAndQuantity[] tasksInvolved;
 
-    // pool of possible special events, & their likelyhood?
+    // Special events, and their likelyhood.
+
+
+
+    // UTILITIES.
+    // Task & Quantity struct for ease of use in inspector.
+    [System.Serializable]
+    public class TaskAndQuantity
+    {
+        public Task taskReference;
+        public int doTaskXTimes;
+    }
 }

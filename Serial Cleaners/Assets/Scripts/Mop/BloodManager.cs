@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BloodManager : MonoBehaviour
+public class BloodManager : TaskManager
 {
     [SerializeField] private Texture2D brushTexture;
     [SerializeField] private UnityEvent onPuddlesDone;
@@ -17,7 +17,7 @@ public class BloodManager : MonoBehaviour
     public Texture2D BrushTexture { get => brushTexture; }
     public Gradient ColorGradient { get => colorGradient; }
 
-    private void Awake() { if (Instance != null && Instance != this) Destroy(gameObject); else Instance = this;  AllPuddlesCleaned = false; }
+    private void Awake() { if (Instance != null && Instance != this) Destroy(this); else Instance = this;  AllPuddlesCleaned = false; }
 
     public void RemovePuddle(BloodPuddle puddle)
     {

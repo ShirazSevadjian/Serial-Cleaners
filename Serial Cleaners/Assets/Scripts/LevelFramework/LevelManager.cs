@@ -21,26 +21,15 @@ public class LevelManager : MonoBehaviour
     // Parameters.
     [SerializeField] private float remainingTimerDuration;
     public bool gamePaused;
-    // Other stuff
+
+    // Task managers.
+    [SerializeField] private TaskManager[] taskManagers;
+    // Tasklist UI.
+    [SerializeField] private TasklistUI taskListUI;
+
 
     // Is the level currently running?
     bool isLevelActive = false;
-
-
-
-    // Housekeeping.
-    private bool wasBloodCleaned = false;
-    private bool wereBodiesRemoved = false;
-    private bool wasFurnitureReplaced = false;
-
-    public bool WasBloodCleaned { get { return wasBloodCleaned; } set { wasBloodCleaned = value; } }
-    public bool WereBodiesRemoved { get { return wereBodiesRemoved; } set { wereBodiesRemoved = value; } }
-    public bool WasFurnitureReplaced { get { return wasFurnitureReplaced; } set { wasFurnitureReplaced = value; } }
-
-
-
-
-
 
     public float difficultyMultiplier = 1; // Temporary, integrate difficulty as its own thing.
 
@@ -54,8 +43,8 @@ public class LevelManager : MonoBehaviour
     public UnityEvent defeatEvent;
     public UnityEvent_float levelTimerTick;
 
-    private bool allBodies = false;
-    private bool allPuddlesCleaned = false;
+    // private bool allBodies = false;
+    // private bool allPuddlesCleaned = false;
 
     void LevelEventListener() { Debug.Log("There was an event."); }
     void LevelEventListener(string message) { Debug.Log("There was an event. " + message); }
@@ -108,7 +97,7 @@ public class LevelManager : MonoBehaviour
 
         // Start the level. Delay?
         levelTimerTick.Invoke(remainingTimerDuration);
-        //StartLevel();
+        StartLevel();
     }
 
     private void Update()
@@ -154,6 +143,11 @@ public class LevelManager : MonoBehaviour
         {
             Debug.Log("Level is starting.");
 
+
+            // Set up task managers from those referenced in the level's parameters.
+            SetUpTasksAndManagers();
+            
+            
             // If requested, restart the timer.
             if (resetTimer)
                 SetTimerDuration(currentLvl.baseLvlDuration);
@@ -163,14 +157,33 @@ public class LevelManager : MonoBehaviour
 
             isLevelActive = true;
             levelStartEvent.Invoke(remainingTimerDuration);
-
-
-            // Reset win paramters.
-            WasBloodCleaned = false;
-            WereBodiesRemoved = false;
-            WasFurnitureReplaced = false;
         }
     }
+
+    private void SetUpTasksAndManagers()
+    {
+        taskManagers = new TaskManager[currentLvl.tasksInvolved.Length];
+        LevelParameters.TaskAndQuantity taskInfo;
+
+        for (int i = 0; i < currentLvl.tasksInvolved.Length; i++)
+        {
+            taskInfo = currentLvl.tasksInvolved[i];
+            System.Type type = System.Type.GetType(taskInfo.taskReference.taskManagerClassName);
+
+            if (type != null)
+            {
+                // Create the associated task manager. 
+                // Have it already exist as a prefab instead?
+                taskManagers[i] = UnityEditor.ObjectFactory.AddComponent(gameObject, type) as TaskManager;
+                taskManagers[i].PrepareManager(taskInfo.taskReference, taskInfo.doTaskXTimes, taskListUI);
+
+                // Create UI element here?
+
+            }
+        }
+    }
+
+
 
     // End of level method.
     public void EndLevel()
@@ -186,32 +199,40 @@ public class LevelManager : MonoBehaviour
             if (timerDecreaseCoroutine != null)
                 StopCoroutine(timerDecreaseCoroutine);
             Debug.Log(string.Format("There are {0} seconds left to the timer.", remainingTimerDuration));
-<<<<<<< Updated upstream
+
+
+            // Save the remaining time duration to a text file.
             timeRemaining_Txt.text = remainingTimerDuration.ToString() + "s";
-=======
 
 
->>>>>>> Stashed changes
             // Do checks. Was everything properly cleaned up?
             if (VictoryConditionsMet())
                 DoVictory();
             else DoFailure();
         }
     }
-
-<<<<<<< Updated upstream
-    public void LevelChecker()
+    /*
+    public void LevelChecker() // What is this used for?
     {
         if (BloodManager.Instance.AllPuddlesCleaned && BodyManager.Instance.AllBodiesCleaned)
         {
             EndLevel();
         }
     }
-=======
+    */
+
 
     private bool VictoryConditionsMet()
     {
-        return WasBloodCleaned && WereBodiesRemoved && WasFurnitureReplaced;
+        // Loop through the task managers and verify whether their tasks have been completed.
+        foreach (TaskManager tm in taskManagers)
+        {
+            // Return false as soon as one has not.
+            if (!tm.IsTaskDone) 
+                return false;
+        } 
+        // Else, return true.
+        return true;
     }
 
     private void DoVictory()
@@ -224,8 +245,6 @@ public class LevelManager : MonoBehaviour
         defeatEvent.Invoke();
     }
 
-
->>>>>>> Stashed changes
 
     // TIMER.
     private void SetTimerDuration(float baseLevelDuration)
