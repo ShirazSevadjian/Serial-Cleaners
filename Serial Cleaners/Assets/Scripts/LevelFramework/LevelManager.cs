@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour
 {
     // Singleton pattern.
     public static LevelManager Instance { get; private set; }
-    
+
     // Level info scriptable object.
     [SerializeField] private LevelParameters currentLvl;
 
@@ -109,7 +109,7 @@ public class LevelManager : MonoBehaviour
                 ResumeGame();
             else PauseGame();
         }
-       
+
     }
 
 
@@ -134,7 +134,7 @@ public class LevelManager : MonoBehaviour
         ResetParameters(currentLvl);
     }
 
-    
+
     // These are public so that other scripts can call them using the level manager's instance.
     // Start of level method.
     public void StartLevel(bool resetTimer = false)
@@ -199,11 +199,8 @@ public class LevelManager : MonoBehaviour
             if (timerDecreaseCoroutine != null)
                 StopCoroutine(timerDecreaseCoroutine);
             Debug.Log(string.Format("There are {0} seconds left to the timer.", remainingTimerDuration));
-
-
             // Save the remaining time duration to a text file.
             timeRemaining_Txt.text = remainingTimerDuration.ToString() + "s";
-
 
             // Do checks. Was everything properly cleaned up?
             if (VictoryConditionsMet())
@@ -244,7 +241,6 @@ public class LevelManager : MonoBehaviour
     {
         defeatEvent.Invoke();
     }
-
 
     // TIMER.
     private void SetTimerDuration(float baseLevelDuration)

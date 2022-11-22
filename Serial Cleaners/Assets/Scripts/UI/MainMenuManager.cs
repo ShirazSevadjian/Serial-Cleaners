@@ -32,10 +32,23 @@ public class MainMenuManager : MonoBehaviour
         }
     }
 
+    #region Sound
     public void MasterVolume(float volume)
     {
         master.SetFloat("MasterVolume", volume);
     }
+
+    public void MusicVolume(float volume)
+    {
+        master.SetFloat("MusicVolume", volume);
+    }
+
+    public void EffectsVolume(float volume)
+    {
+        master.SetFloat("EffectsVolume", volume);
+    }
+    #endregion
+
 
     public void FullScreenToggle(bool toggle)
     {
