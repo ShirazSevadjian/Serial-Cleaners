@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 619f4305baf1378478366b33f36e07a0, type: 3}
   m_Name: Task_BloodPuddles
   m_EditorClassIdentifier: 
-  taskText: Mop up Blood Puddles
+  taskText: mop up the blood puddles
   taskIcon: {fileID: 21300000, guid: 2d12df69507019540968ba8afffd8044, type: 3}
   taskManagerClassName: BloodManager

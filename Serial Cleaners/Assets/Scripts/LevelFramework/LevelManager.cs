@@ -177,8 +177,8 @@ public class LevelManager : MonoBehaviour
                 taskManagers[i] = UnityEditor.ObjectFactory.AddComponent(gameObject, type) as TaskManager;
                 taskManagers[i].PrepareManager(taskInfo.taskReference, taskInfo.doTaskXTimes, taskListUI);
 
-                // Create UI element here?
-
+                // Create associated UI element in the taskListUI.
+                taskListUI.CreateLabelForTask(taskManagers[i]);
             }
         }
     }

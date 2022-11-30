@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 619f4305baf1378478366b33f36e07a0, type: 3}
   m_Name: Task_Bodybags
   m_EditorClassIdentifier: 
-  taskText: Dispose of the Bodies
+  taskText: dispose of the bodies
   taskIcon: {fileID: 21300000, guid: d612ddcc83745224b8497b56a5b5c6f8, type: 3}
+  taskManagerClassName: TaskManager

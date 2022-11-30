@@ -14,12 +14,12 @@ public class TaskManager : MonoBehaviour
     [SerializeField] private int doneXTimesSoFar;
 
     // For use by the UI.
-    public int DoXTimesInTotal { get; }
-    public int DoneXTimesSoFar { get; }
+    public int DoXTimesInTotal { get { return doXTimesInTotal; } }
+    public int DoneXTimesSoFar { get { return doneXTimesSoFar; } }
 
 
     // Associated UI component.
-    [SerializeField] private TasklistUI myTasklistUI;
+    public TasklistUI myTasklistUI;
 
 
     // METHODS
@@ -31,7 +31,6 @@ public class TaskManager : MonoBehaviour
         doneXTimesSoFar = 0;
 
         this.myTasklistUI = tasklistUI;
-        // Set target text in tasklistUI;
     }
 
     // Increase the task' completion counter.
@@ -39,7 +38,7 @@ public class TaskManager : MonoBehaviour
     public void IncreaseTaskCompletion(int doneXTimes = 1)
     {
         doneXTimesSoFar += doneXTimes;
-        // Update task UI text.
+        myTasklistUI.UpdateTaskLabel(this);
 
         // Check if the task is now complete.
         CheckIfTaskDone();
