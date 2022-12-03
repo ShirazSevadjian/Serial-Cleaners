@@ -3,7 +3,87 @@ guid: 368884ddd19f7c143b96d96f9a761080
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BoxLabel
+    second: {fileID: 2100000, guid: 89ab31824f6b60b4fb9a18446482b2b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cardboard1
+    second: {fileID: 2100000, guid: 4898ceaf2aa48fe499d15dc37bbaa647, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cardboard2
+    second: {fileID: 2100000, guid: 823749bdd1bb1f4429355dac38ff24de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cardboard3
+    second: {fileID: 2100000, guid: 9dbeef47dae82764da92b7bab847c5c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cardboard4
+    second: {fileID: 2100000, guid: 6c610894b9dc2f64cb75411f77eb0e67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorHandle
+    second: {fileID: 2100000, guid: dcbfd5105a398c74ea12f073ac99c33f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Logo
+    second: {fileID: 2100000, guid: 6dfe3d6aff799d24fb69b28ebb739ada, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: c4926b00d570f7844ac686ac0e0f51f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: ffe1f941bae767b42a948f4bdaf4c5b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rim
+    second: {fileID: 2100000, guid: 8ecc32cdd9c41ea40832745cb2c2d185, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tape
+    second: {fileID: 2100000, guid: e7c8c24995973ce42b241885f8892a7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tire
+    second: {fileID: 2100000, guid: df894251a8575814c9235773ef362296, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VanBody
+    second: {fileID: 2100000, guid: dc66866c9cb6c394481aacf91fa2b5ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Windows
+    second: {fileID: 2100000, guid: 5e7df20f92fb09c469fb639126814218, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodPalette
+    second: {fileID: 2100000, guid: cb747fb7c7baedc47acc0eb94df06b92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodPaletteLight
+    second: {fileID: 2100000, guid: 3a7efbab3c3f2e24689ddf4f3cd043e8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
