@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1273174, g: 0.13414761, b: 0.12107885, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3730,7 +3730,7 @@ RectTransform:
   - {fileID: 11400355}
   - {fileID: 1265505712}
   m_Father: {fileID: 1256445828}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7559,7 +7559,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245502816}
-  m_LocalRotation: {x: 0.002467503, y: 0.8420367, z: -0.5394008, w: 0.003851919}
+  m_LocalRotation: {x: 0.0024674768, y: 0.8420367, z: -0.5394008, w: 0.003851878}
   m_LocalPosition: {x: 0, y: 0, z: 59.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -11182,7 +11182,7 @@ RectTransform:
   - {fileID: 1147065724}
   - {fileID: 697268198}
   m_Father: {fileID: 1256445828}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -11798,7 +11798,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992484183}
-  m_LocalRotation: {x: 0.002467503, y: 0.8420367, z: -0.5394008, w: 0.003851919}
+  m_LocalRotation: {x: 0.0024674768, y: 0.8420367, z: -0.5394008, w: 0.003851878}
   m_LocalPosition: {x: -6.1, y: 78.6, z: 59.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -12501,6 +12501,14 @@ PrefabInstance:
       value: LevelManagerAndUI
       objectReference: {fileID: 0}
     - target: {fileID: 1885500215353258900, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
+      propertyPath: mainPausePanel
+      value: 
+      objectReference: {fileID: 1885500214904009302}
+    - target: {fileID: 1885500215353258900, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
+      propertyPath: optionsPausePanel
+      value: 
+      objectReference: {fileID: 1885500214904009301}
+    - target: {fileID: 1885500215353258900, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
       propertyPath: timeRemaining_Txt
       value: 
       objectReference: {fileID: 1265505713}
@@ -12670,6 +12678,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
+--- !u!1 &1885500214904009301 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 381191428264278600, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
+  m_PrefabInstance: {fileID: 1885500214904009300}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1885500214904009302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3418758235256635164, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
+  m_PrefabInstance: {fileID: 1885500214904009300}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3119041003756589370
 PrefabInstance:
   m_ObjectHideFlags: 0
