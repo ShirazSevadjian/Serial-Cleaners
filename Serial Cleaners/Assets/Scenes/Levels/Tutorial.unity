@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SubtractiveShadowColor: {r: 0.3773585, g: 0.29326224, b: 0.31028852, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: beba06eaca4b90e40b3d2236908bac8a, type: 2}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 2f2b00e593088684ca42a292165bec76, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -445,6 +445,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarbordBox4 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8233507098598865499, guid: 9c702939b4ec188409d4471ed1401817, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c702939b4ec188409d4471ed1401817, type: 3}
 --- !u!1001 &26661592
@@ -502,6 +506,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WarehouseShelves (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8213456584182542903, guid: 90a4bd92ef5a9bc49918eddddd364c68, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90a4bd92ef5a9bc49918eddddd364c68, type: 3}
 --- !u!1001 &26911650
@@ -514,6 +522,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 68ee3d17a75022e4ebc3881d12645841, type: 3}
       propertyPath: m_Name
       value: Phone
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 68ee3d17a75022e4ebc3881d12645841, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 68ee3d17a75022e4ebc3881d12645841, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68ee3d17a75022e4ebc3881d12645841, type: 3}
       propertyPath: m_RootOrder
@@ -588,6 +604,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_Name
       value: Road_Streight_Double_A (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_RootOrder
@@ -722,6 +742,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarbordBox4 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8233507098598865499, guid: 9c702939b4ec188409d4471ed1401817, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c702939b4ec188409d4471ed1401817, type: 3}
 --- !u!1001 &156261163
@@ -734,6 +758,10 @@ PrefabInstance:
     - target: {fileID: 3501224746703434197, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
       propertyPath: m_Name
       value: CarbordBox3 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501224746703434197, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5663976131703548254, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
       propertyPath: m_RootOrder
@@ -836,6 +864,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodPaletteFull1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7317129833436626661, guid: d2f587bce510c0440b2d75aa2a4d8e6b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2f587bce510c0440b2d75aa2a4d8e6b, type: 3}
 --- !u!4 &171373780 stripped
@@ -853,6 +885,10 @@ PrefabInstance:
     - target: {fileID: 3501224746703434197, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
       propertyPath: m_Name
       value: CarbordBox3 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501224746703434197, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5663976131703548254, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
       propertyPath: m_RootOrder
@@ -963,6 +999,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 28d375a433cc78c4fa3db00df795f14d, type: 3}
       propertyPath: m_Name
       value: Hidrant
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 28d375a433cc78c4fa3db00df795f14d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 28d375a433cc78c4fa3db00df795f14d, type: 3}
       propertyPath: m_RootOrder
@@ -1081,6 +1121,10 @@ PrefabInstance:
     - target: {fileID: 8412754798784854831, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
       propertyPath: m_Name
       value: WoodPalette (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8412754798784854831, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
@@ -1297,6 +1341,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_Streight_Double_A (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1370,6 +1418,10 @@ PrefabInstance:
     - target: {fileID: 3501224746703434197, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
       propertyPath: m_Name
       value: CarbordBox3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501224746703434197, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5663976131703548254, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
       propertyPath: m_RootOrder
@@ -1626,6 +1678,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodCrate (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8838521903553842991, guid: 586451879a93c9f48a470319c92617e2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 586451879a93c9f48a470319c92617e2, type: 3}
 --- !u!1 &290611398
@@ -1686,6 +1742,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_Name
       value: Road_Streight_Double_A (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_RootOrder
@@ -1765,6 +1825,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_Name
       value: Road_Streight_Double_A (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_RootOrder
@@ -1881,7 +1945,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.9608899, b: 0.75827706, a: 1}
   m_Intensity: 150
   m_Range: 20
   m_SpotAngle: 80
@@ -2340,6 +2404,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodCrate (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8838521903553842991, guid: 586451879a93c9f48a470319c92617e2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 586451879a93c9f48a470319c92617e2, type: 3}
 --- !u!1001 &361569957
@@ -2352,6 +2420,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_Name
       value: Road_Streight_Double_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_RootOrder
@@ -2632,6 +2704,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodCrateHalves
       objectReference: {fileID: 0}
+    - target: {fileID: 3308054314967193113, guid: e75af9061ced1754a83b19104bf3c4b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e75af9061ced1754a83b19104bf3c4b5, type: 3}
 --- !u!4 &392791594 stripped
@@ -2693,6 +2769,10 @@ PrefabInstance:
     - target: {fileID: 7317129833436626661, guid: d2f587bce510c0440b2d75aa2a4d8e6b, type: 3}
       propertyPath: m_Name
       value: WoodPaletteFull1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317129833436626661, guid: d2f587bce510c0440b2d75aa2a4d8e6b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2f587bce510c0440b2d75aa2a4d8e6b, type: 3}
@@ -2882,6 +2962,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodCrateHalves (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3308054314967193113, guid: e75af9061ced1754a83b19104bf3c4b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e75af9061ced1754a83b19104bf3c4b5, type: 3}
 --- !u!4 &479787991 stripped
@@ -2899,6 +2983,10 @@ PrefabInstance:
     - target: {fileID: 3501224746703434197, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
       propertyPath: m_Name
       value: CarbordBox3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501224746703434197, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5663976131703548254, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
       propertyPath: m_RootOrder
@@ -3191,6 +3279,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LampPost_J (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
       value: 32
@@ -3264,6 +3356,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_Name
       value: LampPost_J (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
@@ -3430,6 +3526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarbordBox4 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8233507098598865499, guid: 9c702939b4ec188409d4471ed1401817, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c702939b4ec188409d4471ed1401817, type: 3}
 --- !u!1001 &580802333
@@ -3491,6 +3591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodCrateHalves (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3308054314967193113, guid: e75af9061ced1754a83b19104bf3c4b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e75af9061ced1754a83b19104bf3c4b5, type: 3}
 --- !u!4 &617130667 stripped
@@ -3540,7 +3644,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.9608899, b: 0.75827706, a: 1}
   m_Intensity: 150
   m_Range: 20
   m_SpotAngle: 80
@@ -3726,6 +3830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodPalette (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8412754798784854831, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
 --- !u!1001 &663853601
@@ -3795,6 +3903,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarbordBox4 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8233507098598865499, guid: 9c702939b4ec188409d4471ed1401817, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c702939b4ec188409d4471ed1401817, type: 3}
 --- !u!1001 &675177674
@@ -3807,6 +3919,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_Name
       value: LampPost_J (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
@@ -3886,6 +4002,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 30859949d2d96fb42b8fbe8085154234, type: 3}
       propertyPath: m_Name
       value: RoadM_PArking_D (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 30859949d2d96fb42b8fbe8085154234, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 30859949d2d96fb42b8fbe8085154234, type: 3}
       propertyPath: m_RootOrder
@@ -4044,6 +4164,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_Name
       value: Road_Streight_Double_A (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_RootOrder
@@ -4231,6 +4355,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parking_Enterence_B
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dc3af180ffa4e2840af6a2e481783985, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc3af180ffa4e2840af6a2e481783985, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -4394,6 +4522,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_Name
       value: LampPost_J (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
@@ -4602,6 +4734,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoadM_PArking_D
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 30859949d2d96fb42b8fbe8085154234, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 30859949d2d96fb42b8fbe8085154234, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -4720,6 +4856,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WarehouseShelves (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8213456584182542903, guid: 90a4bd92ef5a9bc49918eddddd364c68, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90a4bd92ef5a9bc49918eddddd364c68, type: 3}
 --- !u!1001 &786658133
@@ -4732,6 +4872,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_Name
       value: LampPost_J (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
@@ -4937,6 +5081,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarbordBox4 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8233507098598865499, guid: 9c702939b4ec188409d4471ed1401817, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c702939b4ec188409d4471ed1401817, type: 3}
 --- !u!1001 &824406731
@@ -4993,6 +5141,10 @@ PrefabInstance:
     - target: {fileID: 8412754798784854831, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
       propertyPath: m_Name
       value: WoodPalette (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8412754798784854831, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
@@ -5056,6 +5208,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodPalette (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8412754798784854831, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
 --- !u!1 &854338136 stripped
@@ -5100,6 +5256,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_Name
       value: LampPost_J (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
@@ -5206,7 +5366,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.9608899, b: 0.75827706, a: 1}
   m_Intensity: 150
   m_Range: 20
   m_SpotAngle: 80
@@ -5312,6 +5472,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WarehouseShelves (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8213456584182542903, guid: 90a4bd92ef5a9bc49918eddddd364c68, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90a4bd92ef5a9bc49918eddddd364c68, type: 3}
 --- !u!1001 &879148611
@@ -5324,6 +5488,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_Name
       value: LampPost_J (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
@@ -5398,6 +5566,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_Name
       value: LampPost_J (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
@@ -5477,6 +5649,10 @@ PrefabInstance:
     - target: {fileID: 759293047444613527, guid: 11a0a6cd255bee64ea37ccc1ec80784c, type: 3}
       propertyPath: m_Name
       value: CarbordBox2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 759293047444613527, guid: 11a0a6cd255bee64ea37ccc1ec80784c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1215524517216508790, guid: 11a0a6cd255bee64ea37ccc1ec80784c, type: 3}
       propertyPath: m_RootOrder
@@ -5674,6 +5850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LampPost_J (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -5747,6 +5927,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_Name
       value: LampPost_J (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
@@ -5871,6 +6055,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarbordBox4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8233507098598865499, guid: 9c702939b4ec188409d4471ed1401817, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c702939b4ec188409d4471ed1401817, type: 3}
 --- !u!1001 &1020846130
@@ -5928,6 +6116,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarbordBox4 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8233507098598865499, guid: 9c702939b4ec188409d4471ed1401817, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c702939b4ec188409d4471ed1401817, type: 3}
 --- !u!1001 &1020953171
@@ -5940,6 +6132,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_Name
       value: LampPost_J (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
@@ -6015,6 +6211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SewerCap_A (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 381f2680f281e244eb33ca1608e0a5f1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 381f2680f281e244eb33ca1608e0a5f1, type: 3}
       propertyPath: m_RootOrder
       value: 36
@@ -6088,6 +6288,10 @@ PrefabInstance:
     - target: {fileID: 759293047444613527, guid: 11a0a6cd255bee64ea37ccc1ec80784c, type: 3}
       propertyPath: m_Name
       value: CarbordBox2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 759293047444613527, guid: 11a0a6cd255bee64ea37ccc1ec80784c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1215524517216508790, guid: 11a0a6cd255bee64ea37ccc1ec80784c, type: 3}
       propertyPath: m_RootOrder
@@ -6200,6 +6404,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodPaletteFull1
       objectReference: {fileID: 0}
+    - target: {fileID: 7317129833436626661, guid: d2f587bce510c0440b2d75aa2a4d8e6b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2f587bce510c0440b2d75aa2a4d8e6b, type: 3}
 --- !u!4 &1095054176 stripped
@@ -6217,6 +6425,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_Name
       value: LampPost_J (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
@@ -6628,6 +6840,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LampPost_J (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -6943,6 +7159,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_Streight_Double_A (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -7016,6 +7236,10 @@ PrefabInstance:
     - target: {fileID: 5215508191764792270, guid: 96c271af0d418b2418012f550e1d7e72, type: 3}
       propertyPath: m_Name
       value: CarbordBox1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5215508191764792270, guid: 96c271af0d418b2418012f550e1d7e72, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7132202484314430879, guid: 96c271af0d418b2418012f550e1d7e72, type: 3}
       propertyPath: m_RootOrder
@@ -7335,7 +7559,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245502816}
-  m_LocalRotation: {x: 0.0024674768, y: 0.8420367, z: -0.5394008, w: 0.003851878}
+  m_LocalRotation: {x: 0.002467503, y: 0.8420367, z: -0.5394008, w: 0.003851919}
   m_LocalPosition: {x: 0, y: 0, z: 59.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -7604,6 +7828,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_Streight_Double_A (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -7677,6 +7905,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_Name
       value: Road_Streight_Double_A (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_RootOrder
@@ -7803,7 +8035,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.9608899, b: 0.75827706, a: 1}
   m_Intensity: 150
   m_Range: 20
   m_SpotAngle: 80
@@ -7864,6 +8096,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_Name
       value: LampPost_J (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
@@ -7983,6 +8219,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodCrate (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8838521903553842991, guid: 586451879a93c9f48a470319c92617e2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 586451879a93c9f48a470319c92617e2, type: 3}
 --- !u!1001 &1339295587
@@ -7995,6 +8235,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_Name
       value: LampPost_J
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
@@ -8149,6 +8393,10 @@ PrefabInstance:
     - target: {fileID: 5215508191764792270, guid: 96c271af0d418b2418012f550e1d7e72, type: 3}
       propertyPath: m_Name
       value: CarbordBox1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5215508191764792270, guid: 96c271af0d418b2418012f550e1d7e72, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7132202484314430879, guid: 96c271af0d418b2418012f550e1d7e72, type: 3}
       propertyPath: m_RootOrder
@@ -8364,7 +8612,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.9608899, b: 0.75827706, a: 1}
   m_Intensity: 150
   m_Range: 20
   m_SpotAngle: 80
@@ -8470,6 +8718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WarehouseShelves (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8213456584182542903, guid: 90a4bd92ef5a9bc49918eddddd364c68, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90a4bd92ef5a9bc49918eddddd364c68, type: 3}
 --- !u!4 &1406906666 stripped
@@ -8536,6 +8788,10 @@ PrefabInstance:
     - target: {fileID: 8412754798784854831, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
       propertyPath: m_Name
       value: WoodPalette
+      objectReference: {fileID: 0}
+    - target: {fileID: 8412754798784854831, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
@@ -8604,6 +8860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodCrate
       objectReference: {fileID: 0}
+    - target: {fileID: 8838521903553842991, guid: 586451879a93c9f48a470319c92617e2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 586451879a93c9f48a470319c92617e2, type: 3}
 --- !u!4 &1472517266 stripped
@@ -8670,6 +8930,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodPaletteFull1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7317129833436626661, guid: d2f587bce510c0440b2d75aa2a4d8e6b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2f587bce510c0440b2d75aa2a4d8e6b, type: 3}
 --- !u!1001 &1479714795
@@ -8682,6 +8946,10 @@ PrefabInstance:
     - target: {fileID: 759293047444613527, guid: 11a0a6cd255bee64ea37ccc1ec80784c, type: 3}
       propertyPath: m_Name
       value: CarbordBox2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 759293047444613527, guid: 11a0a6cd255bee64ea37ccc1ec80784c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1215524517216508790, guid: 11a0a6cd255bee64ea37ccc1ec80784c, type: 3}
       propertyPath: m_RootOrder
@@ -8739,6 +9007,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 381f2680f281e244eb33ca1608e0a5f1, type: 3}
       propertyPath: m_Name
       value: SewerCap_A (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 381f2680f281e244eb33ca1608e0a5f1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 381f2680f281e244eb33ca1608e0a5f1, type: 3}
       propertyPath: m_RootOrder
@@ -8845,7 +9117,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.9608899, b: 0.75827706, a: 1}
   m_Intensity: 150
   m_Range: 20
   m_SpotAngle: 80
@@ -8911,6 +9183,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_Name
       value: LampPost_J (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
@@ -8990,6 +9266,10 @@ PrefabInstance:
     - target: {fileID: 3501224746703434197, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
       propertyPath: m_Name
       value: CarbordBox3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501224746703434197, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5663976131703548254, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
       propertyPath: m_RootOrder
@@ -9316,6 +9596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WarehouseShelves
       objectReference: {fileID: 0}
+    - target: {fileID: 8213456584182542903, guid: 90a4bd92ef5a9bc49918eddddd364c68, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8187793283223203538, guid: 90a4bd92ef5a9bc49918eddddd364c68, type: 3}
     - {fileID: 2257076185352017, guid: 90a4bd92ef5a9bc49918eddddd364c68, type: 3}
@@ -9378,6 +9662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodPalette (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8412754798784854831, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
 --- !u!1 &1555946964
@@ -9394,7 +9682,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1555946965
 Transform:
@@ -9510,6 +9798,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarbordBox3
       objectReference: {fileID: 0}
+    - target: {fileID: 3501224746703434197, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5663976131703548254, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
       propertyPath: m_RootOrder
       value: 51
@@ -9571,6 +9863,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_Name
       value: Road_Streight_Double_A (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_RootOrder
@@ -9651,6 +9947,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarbordBox3 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3501224746703434197, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5663976131703548254, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
       propertyPath: m_RootOrder
       value: 35
@@ -9711,7 +10011,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1638838310
 Transform:
@@ -9835,6 +10135,10 @@ PrefabInstance:
     - target: {fileID: 8233507098598865499, guid: 9c702939b4ec188409d4471ed1401817, type: 3}
       propertyPath: m_Name
       value: CarbordBox4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233507098598865499, guid: 9c702939b4ec188409d4471ed1401817, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c702939b4ec188409d4471ed1401817, type: 3}
@@ -9976,6 +10280,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarbordBox1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5215508191764792270, guid: 96c271af0d418b2418012f550e1d7e72, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7132202484314430879, guid: 96c271af0d418b2418012f550e1d7e72, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -10077,6 +10385,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodPalette (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8412754798784854831, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
 --- !u!1001 &1696126756
@@ -10089,6 +10401,10 @@ PrefabInstance:
     - target: {fileID: 3501224746703434197, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
       propertyPath: m_Name
       value: CarbordBox3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501224746703434197, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5663976131703548254, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
       propertyPath: m_RootOrder
@@ -10157,6 +10473,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 381f2680f281e244eb33ca1608e0a5f1, type: 3}
       propertyPath: m_Name
       value: SewerCap_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 381f2680f281e244eb33ca1608e0a5f1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 381f2680f281e244eb33ca1608e0a5f1, type: 3}
       propertyPath: m_RootOrder
@@ -10358,6 +10678,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WarehouseShelves (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8213456584182542903, guid: 90a4bd92ef5a9bc49918eddddd364c68, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90a4bd92ef5a9bc49918eddddd364c68, type: 3}
 --- !u!4 &1736546095 stripped
@@ -10375,6 +10699,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_Name
       value: Road_Streight_Double_A (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_RootOrder
@@ -10449,6 +10777,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_Name
       value: LampPost_J (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
@@ -10572,6 +10904,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodCrateHalves (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3308054314967193113, guid: e75af9061ced1754a83b19104bf3c4b5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e75af9061ced1754a83b19104bf3c4b5, type: 3}
 --- !u!1001 &1819312861
@@ -10584,6 +10920,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_Name
       value: LampPost_J (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
@@ -10703,6 +11043,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodPalette (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8412754798784854831, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de0eeb50397fbb74b94cb9a13ea753fc, type: 3}
 --- !u!1001 &1836004698
@@ -10715,6 +11059,10 @@ PrefabInstance:
     - target: {fileID: 3501224746703434197, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
       propertyPath: m_Name
       value: CarbordBox3 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501224746703434197, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5663976131703548254, guid: c22a77d313ae02d46938fa84adcc3a69, type: 3}
       propertyPath: m_RootOrder
@@ -10851,6 +11199,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_Name
       value: LampPost_J (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
@@ -11005,6 +11357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_Streight_Double_A (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d7d436d613cf3c04391992a34ceb777e, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -11078,6 +11434,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 381f2680f281e244eb33ca1608e0a5f1, type: 3}
       propertyPath: m_Name
       value: SewerCap_A (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 381f2680f281e244eb33ca1608e0a5f1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 381f2680f281e244eb33ca1608e0a5f1, type: 3}
       propertyPath: m_RootOrder
@@ -11157,6 +11517,10 @@ PrefabInstance:
     - target: {fileID: 5215508191764792270, guid: 96c271af0d418b2418012f550e1d7e72, type: 3}
       propertyPath: m_Name
       value: CarbordBox1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5215508191764792270, guid: 96c271af0d418b2418012f550e1d7e72, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7132202484314430879, guid: 96c271af0d418b2418012f550e1d7e72, type: 3}
       propertyPath: m_RootOrder
@@ -11246,7 +11610,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.9608899, b: 0.75827706, a: 1}
   m_Intensity: 100
   m_Range: 20
   m_SpotAngle: 60
@@ -11307,6 +11671,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_Name
       value: LampPost_J (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 52685ed25fdcb1b488b7047664232501, type: 3}
       propertyPath: m_RootOrder
@@ -11430,7 +11798,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992484183}
-  m_LocalRotation: {x: 0.0024674768, y: 0.8420367, z: -0.5394008, w: 0.003851878}
+  m_LocalRotation: {x: 0.002467503, y: 0.8420367, z: -0.5394008, w: 0.003851919}
   m_LocalPosition: {x: -6.1, y: 78.6, z: 59.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11498,6 +11866,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodPaletteFull1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7317129833436626661, guid: d2f587bce510c0440b2d75aa2a4d8e6b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2f587bce510c0440b2d75aa2a4d8e6b, type: 3}
 --- !u!1001 &2022457326
@@ -11555,6 +11927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodPaletteFull1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7317129833436626661, guid: d2f587bce510c0440b2d75aa2a4d8e6b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2f587bce510c0440b2d75aa2a4d8e6b, type: 3}
 --- !u!1 &2041323274 stripped
@@ -11599,6 +11975,10 @@ PrefabInstance:
     - target: {fileID: 759293047444613527, guid: 11a0a6cd255bee64ea37ccc1ec80784c, type: 3}
       propertyPath: m_Name
       value: CarbordBox2
+      objectReference: {fileID: 0}
+    - target: {fileID: 759293047444613527, guid: 11a0a6cd255bee64ea37ccc1ec80784c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1215524517216508790, guid: 11a0a6cd255bee64ea37ccc1ec80784c, type: 3}
       propertyPath: m_RootOrder
@@ -11656,6 +12036,10 @@ PrefabInstance:
     - target: {fileID: 5215508191764792270, guid: 96c271af0d418b2418012f550e1d7e72, type: 3}
       propertyPath: m_Name
       value: CarbordBox1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5215508191764792270, guid: 96c271af0d418b2418012f550e1d7e72, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7132202484314430879, guid: 96c271af0d418b2418012f550e1d7e72, type: 3}
       propertyPath: m_RootOrder
@@ -12007,6 +12391,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1561169061}
     m_Modifications:
+    - target: {fileID: 1104859034011141340, guid: 6b981a92289b9cf4999589747ef9394f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104859034030529067, guid: 6b981a92289b9cf4999589747ef9394f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104859034985949662, guid: 6b981a92289b9cf4999589747ef9394f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1104859035468543457, guid: 6b981a92289b9cf4999589747ef9394f, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -12054,6 +12450,14 @@ PrefabInstance:
     - target: {fileID: 1104859035468543469, guid: 6b981a92289b9cf4999589747ef9394f, type: 3}
       propertyPath: m_Name
       value: Van
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104859035468543469, guid: 6b981a92289b9cf4999589747ef9394f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104859035477346998, guid: 6b981a92289b9cf4999589747ef9394f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b981a92289b9cf4999589747ef9394f, type: 3}
@@ -12277,6 +12681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorInside
       objectReference: {fileID: 0}
+    - target: {fileID: 3119041002258070505, guid: a52f4b2ee225ef5438ca1f2bf1f59f11, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3119041002258070510, guid: a52f4b2ee225ef5438ca1f2bf1f59f11, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -12452,6 +12860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Walls
       objectReference: {fileID: 0}
+    - target: {fileID: 4890615772577214775, guid: 877265eb52bc7484fb3894645dd3e402, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5230127836959042445, guid: 877265eb52bc7484fb3894645dd3e402, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -12564,6 +12976,10 @@ PrefabInstance:
     - target: {fileID: 8687090546746453483, guid: 6f3ab7bec18ed9944a1658d6fd07ec59, type: 3}
       propertyPath: m_Name
       value: FloorOutside
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687090546746453483, guid: 6f3ab7bec18ed9944a1658d6fd07ec59, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f3ab7bec18ed9944a1658d6fd07ec59, type: 3}
