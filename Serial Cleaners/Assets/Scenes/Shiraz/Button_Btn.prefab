@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4138005949835975591}
   - component: {fileID: 7259242229756626844}
   m_Layer: 5
-  m_Name: NewGame_Txt
+  m_Name: Button_Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: NEW GAME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6bb17739ad0038640b0c3cee573bab11, type: 2}
-  m_sharedMaterial: {fileID: -2437528813692950889, guid: 6bb17739ad0038640b0c3cee573bab11, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9463e9131928ba24b8f6374a1935bb62, type: 2}
+  m_sharedMaterial: {fileID: 4350666242924660527, guid: 9463e9131928ba24b8f6374a1935bb62, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 5334069586173563987}
   - component: {fileID: 3562931901077792959}
   m_Layer: 5
-  m_Name: Menu Button
+  m_Name: Button_Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
