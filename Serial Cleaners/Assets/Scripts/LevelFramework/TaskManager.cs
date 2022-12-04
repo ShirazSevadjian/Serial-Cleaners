@@ -35,9 +35,12 @@ public class TaskManager : MonoBehaviour
 
     // Increase the task' completion counter.
     // Could theoretically also be used to decrease it.
-    public void IncreaseTaskCompletion(int doneXTimes = 1)
+    public void IncreaseTaskCompletion()
     {
-        doneXTimesSoFar += doneXTimes;
+        doneXTimesSoFar++;
+
+        Debug.Log("Blood puddles cleaned so far: " + doneXTimesSoFar);
+
         myTasklistUI.UpdateTaskLabel(this);
 
         // Check if the task is now complete.

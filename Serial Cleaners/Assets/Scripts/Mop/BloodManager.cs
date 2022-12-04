@@ -10,12 +10,12 @@ public class BloodManager : TaskManager
 
     [SerializeField] private List<GameObject> bloodPuddles;
 
-    [SerializeField] private UnityEvent onPuddlesDone;
+    [SerializeField] private UnityEvent onPuddlesDone; // These events will have to be handled differently.
     [SerializeField] private UnityEvent onOnePuddleDonce;
 
 
     public static BloodManager Instance { get; private set; }
-    public bool AllPuddlesCleaned { get; private set; }
+    public bool AllPuddlesCleaned { get { return CheckIfTaskDone(); } }
     public Texture2D BrushTexture { get => brushTexture; }
     public Gradient ColorGradient { get => colorGradient; }
 
@@ -68,6 +68,5 @@ public class BloodManager : TaskManager
         base.OnTaskDone();
 
         onPuddlesDone.Invoke();
-        AllPuddlesCleaned = true;
     }
 }

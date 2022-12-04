@@ -87,6 +87,7 @@ public class BloodPuddle : MonoBehaviour
                                     // Increase the task's completion count.
                                     bloodManager.RemovePuddle(this);
                                     Destroy(gameObject);
+                                    return;
                                 }
                             }
 
