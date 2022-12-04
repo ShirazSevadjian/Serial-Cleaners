@@ -54,18 +54,6 @@ public class LevelManager : MonoBehaviour
     // CONSTRUCTOR.
     public LevelManager(LevelParameters initialLevelParameters) // May be redundant with the "Awake" function.
     {
-        // Handling of the Singleton pattern.
-        if (Instance != null && Instance != this)
-        {
-            Debug.Log(this + " will be destroyed as it is not the singleton instance, " + Instance);
-            Destroy(this);
-        }
-        else
-        {
-            Debug.Log("Created the singleton " + this);
-            Instance = this;
-        }
-
         // Set initial parameters.
         currentLvl = initialLevelParameters;
         SetParameters(currentLvl);

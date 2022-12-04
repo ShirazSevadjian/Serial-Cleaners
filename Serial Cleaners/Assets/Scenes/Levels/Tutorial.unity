@@ -7446,7 +7446,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 15
+  field of view: 80
   orthographic: 0
   orthographic size: 33.48
   m_Depth: -1
@@ -7559,7 +7559,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245502816}
-  m_LocalRotation: {x: 0.0024674768, y: 0.8420367, z: -0.5394008, w: 0.003851878}
+  m_LocalRotation: {x: 0.0026304917, y: 0.8420288, z: -0.53941065, w: 0.0041062403}
   m_LocalPosition: {x: 0, y: 0, z: 59.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -8453,7 +8453,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1366606094}
-  - component: {fileID: 1366606095}
   m_Layer: 0
   m_Name: BloodManager
   m_TagString: Untagged
@@ -8478,98 +8477,6 @@ Transform:
   m_Father: {fileID: 713964901}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1366606095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1366606093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf79596c5a23754459f2a996b399ccd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  taskReference: {fileID: 0}
-  doXTimesInTotal: 0
-  doneXTimesSoFar: 0
-  myTasklistUI: {fileID: 0}
-  brushTexture: {fileID: 2800000, guid: d92cadb9695c1b14d834a4d83e605918, type: 3}
-  colorGradient:
-    serializedVersion: 2
-    key0: {r: 0.5754717, g: 0, b: 0, a: 1}
-    key1: {r: 0.2264151, g: 0.08688395, b: 0.043525875, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  bloodPuddles:
-  - {fileID: 1520013663}
-  - {fileID: 1130064547}
-  - {fileID: 1692877389}
-  onPuddlesDone:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1256445823}
-        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
-        m_MethodName: onBloodCleaned
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-      - m_Target: {fileID: 1699414464}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: LevelChecker
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onOnePuddleDonce:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1256445823}
-        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
-        m_MethodName: PuddleCleaned
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1371448478
 GameObject:
   m_ObjectHideFlags: 0
@@ -11798,7 +11705,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992484183}
-  m_LocalRotation: {x: 0.0024674768, y: 0.8420367, z: -0.5394008, w: 0.003851878}
+  m_LocalRotation: {x: 0.0026304917, y: 0.8420288, z: -0.53941065, w: 0.0041062403}
   m_LocalPosition: {x: -6.1, y: 78.6, z: 59.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
