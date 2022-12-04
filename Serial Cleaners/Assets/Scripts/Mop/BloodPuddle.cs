@@ -27,8 +27,10 @@ public class BloodPuddle : MonoBehaviour
 
     private void Start()
     {
+        /* Will be prompted by the blood manager.
         bloodManager = BloodManager.Instance;
         brushTexture = bloodManager.BrushTexture;
+        */
 
         bloodAmountTotal = 0.0f;
         for (int x = 0; x < maskBaseTexture.width; x++)
@@ -42,6 +44,12 @@ public class BloodPuddle : MonoBehaviour
         bloodRemaining = bloodAmountTotal;
 
         CreateTexture();
+    }
+
+    public void ConnectBloodManager()
+    {
+        bloodManager = BloodManager.Instance; // Better to pass the reference directly?
+        brushTexture = bloodManager.BrushTexture;
 
         ageCoroutine = StartCoroutine(AgePuddle());
     }
