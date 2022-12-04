@@ -29,6 +29,18 @@ public class BloodManager : TaskManager
         else Instance = this;
         // AllPuddlesCleaned = false; This this set by default in the task manager parent class.
 
+        // Populate the gradient with the proper colours. 
+        // Not optimal atm.
+        GradientColorKey[] colorKeys = new GradientColorKey[2];
+        colorKeys[0].color = new Color(0.55f, 0.017f, 0.023f, 1f);
+        colorKeys[0].time = 0.0f;
+        colorKeys[1].color = new Color(0.3f, 0.15f, 0.1f, 1f);
+        colorKeys[1].time = 1.0f;
+        colorGradient.colorKeys = colorKeys;
+    }
+
+    private void Start()
+    {
         // Collect the puddles into our list.
         BloodPuddle[] boodPuddlesArray = FindObjectsOfType<BloodPuddle>();
 
@@ -38,15 +50,6 @@ public class BloodManager : TaskManager
             bP.ConnectBloodManager();
             bloodPuddles.Add(bP.gameObject);
         }
-
-        // Populate the gradient with the proper colours. 
-        // Not optimal atm.
-        GradientColorKey[] colorKeys = new GradientColorKey[2];
-        colorKeys[0].color = new Color(0.55f, 0.017f, 0.023f, 1f);
-        colorKeys[0].time = 0.0f;
-        colorKeys[1].color = new Color(0.3f, 0.15f, 0.1f, 1f);
-        colorKeys[1].time = 1.0f;
-        colorGradient.colorKeys = colorKeys;
     }
 
 
