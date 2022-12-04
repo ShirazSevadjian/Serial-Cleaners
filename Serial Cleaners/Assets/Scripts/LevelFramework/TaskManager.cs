@@ -41,12 +41,19 @@ public class TaskManager : MonoBehaviour
         myTasklistUI.UpdateTaskLabel(this);
 
         // Check if the task is now complete.
-        CheckIfTaskDone();
+        if (CheckIfTaskDone())
+            OnTaskDone();
     }
 
     // Return whether the task has been completed.
     public bool CheckIfTaskDone()
     {
         return isTaskDone = (doneXTimesSoFar == doXTimesInTotal);
+    }
+
+    // Do when the task is done.
+    protected void OnTaskDone()
+    {
+        Debug.Log(string.Format("The task '{0}' has been completed.", taskReference.taskText));
     }
 }

@@ -3,7 +3,10 @@ guid: bf79596c5a23754459f2a996b399ccd1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - taskReference: {fileID: 11400000, guid: f3eac03a0e3583640b642644d13f3dba, type: 2}
+  - myTasklistUI: {instanceID: 0}
+  - brushTexture: {fileID: 2800000, guid: e6b35bf4847d0ea478a2a63c62ed6233, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

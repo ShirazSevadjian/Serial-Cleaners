@@ -76,6 +76,7 @@ public class BloodPuddle : MonoBehaviour
 
                                 if (bloodPercentange < threshold)
                                 {
+                                    // Increase the task's completion count.
                                     bloodManager.RemovePuddle(this);
                                     Destroy(gameObject);
                                 }
