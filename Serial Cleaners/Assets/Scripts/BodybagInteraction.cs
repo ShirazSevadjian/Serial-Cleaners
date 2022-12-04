@@ -9,8 +9,6 @@ public class BodybagInteraction : Interactable
     private PlayerInteractable currentHandler;
 
 
-
-
     protected override void Awake()
     {
         base.Awake();
@@ -24,21 +22,24 @@ public class BodybagInteraction : Interactable
         {
             if (player.GetComponent<PlayerInteractable>().Attach(this.gameObject, leftHandPosition, rightHandPosition))
             {
+                currentHandler = player.GetComponent<PlayerInteractable>();
+
                 _collider.enabled = false;
                 _rigidbody.useGravity = false;
                 //_rigidbody.isKinematic = true; // The ragdoll should not be kinematic.
                 canvas.SetActive(false);
 
                 // Manhandle the ragdoll.
-
                 //_rigidbodyGrabPoint.isKinematic = true;
-                
+
             }
         }
     }
 
     public override void Detach()
     {
+        currentHandler = null;
+
         _collider.enabled = true;
         _rigidbody.useGravity = true;
         //_rigidbody.isKinematic = false; 
@@ -49,7 +50,9 @@ public class BodybagInteraction : Interactable
 
     private void OnDestroy()
     {
-        BodyManager.Instance.RemoveBody(gameObject);
+        currentHandler.Detach();
+        Detach();
+        
+        BodyManager.Instance.DisposeOfBody(gameObject);
     }
-
 }

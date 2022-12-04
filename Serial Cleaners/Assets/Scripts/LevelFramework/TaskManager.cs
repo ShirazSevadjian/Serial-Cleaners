@@ -39,8 +39,6 @@ public class TaskManager : MonoBehaviour
     {
         doneXTimesSoFar++;
 
-        Debug.Log("Blood puddles cleaned so far: " + doneXTimesSoFar);
-
         myTasklistUI.UpdateTaskLabel(this);
 
         // Check if the task is now complete.

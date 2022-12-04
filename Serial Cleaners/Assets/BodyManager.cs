@@ -38,13 +38,14 @@ public class BodyManager : TaskManager
         // Connect the body disposal script to this.
     }
 
-    public void RemoveBody(GameObject body)
+    public void DisposeOfBody(GameObject body)
     {
         if (body == null) return;
 
+        bodies.Remove(body.gameObject);
+
         IncreaseTaskCompletion();
 
-        bodies.Remove(body.gameObject);
         onOneBodyDestroyed.Invoke();
     }
 

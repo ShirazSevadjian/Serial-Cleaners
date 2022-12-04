@@ -31,16 +31,7 @@ public class PlayerInteractable : MonoBehaviour
     {
         if (Input.GetButtonDown("Cancel"))
         {
-            if (interactableObject != null)
-            {
-                lBoneConstraint.weight = 0.0f;
-                rBoneConstraint.weight = 0.0f;
-                attached = false;
-
-                interactableObject.Detach();
-                interactableObject.transform.SetParent(null);
-                interactableObject = null;
-            }
+            Detach();
         }
     }
 
@@ -101,6 +92,20 @@ public class PlayerInteractable : MonoBehaviour
         else
         {
             return false;
+        }
+    }
+
+    public void Detach()
+    {
+        if (interactableObject != null)
+        {
+            lBoneConstraint.weight = 0.0f;
+            rBoneConstraint.weight = 0.0f;
+            attached = false;
+
+            interactableObject.Detach();
+            interactableObject.transform.SetParent(null);
+            interactableObject = null;
         }
     }
 
