@@ -58,7 +58,7 @@ public class BloodPuddle : MonoBehaviour
     {
         if (other.CompareTag("Mop"))
         {
-            if (!aged || other.GetComponent<MopCleaner>().wet)
+            if (!aged || other.GetComponent<MopCleaner>().Wet)
             {
                 Ray ray = new Ray(other.transform.position, -Vector3.up);
                 if (Physics.Raycast(ray, out RaycastHit hitInfo, 2.0f))

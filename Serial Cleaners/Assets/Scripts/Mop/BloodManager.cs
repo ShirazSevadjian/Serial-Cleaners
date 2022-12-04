@@ -52,6 +52,10 @@ public class BloodManager : TaskManager
         }
     }
 
+    public void Start()
+    {
+        
+    }
 
     public void RemovePuddle(BloodPuddle puddle)
     {

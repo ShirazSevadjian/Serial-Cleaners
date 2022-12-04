@@ -16,7 +16,6 @@ public class LevelParameters : ScriptableObject
     // Special events, and their likelyhood.
 
 
-
     // UTILITIES.
     // Task & Quantity struct for ease of use in inspector.
     [System.Serializable]

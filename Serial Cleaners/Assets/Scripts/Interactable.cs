@@ -10,7 +10,7 @@ public abstract class Interactable : MonoBehaviour
     protected SphereCollider _collider;
     protected Rigidbody _rigidbody;
 
-    private bool _isInside;
+    protected bool _isInside;
 
     protected GameObject player;
 
