@@ -27,7 +27,15 @@ public class TwoPersonCarry : MonoBehaviour
                 {
                     player1Holding = true;
                     Debug.Log("Found object in range");
-                    PickupObject(hit.transform.gameObject, player1HoldPosition);      
+                    PickupObject(hit.transform.gameObject, player1HoldPosition);
+
+                    //player1.gameObject.GetComponent<Rigidbody>().centerOfMass = new Vector3(0, 0, 0); 
+                    FixedJoint joint = player1.AddComponent<FixedJoint>();
+                    joint.anchor = hit.point;
+                    joint.connectedBody = hit.transform.GetComponent<Rigidbody>();
+                    joint.enableCollision = false;
+
+                    Physics.IgnoreCollision(player1.GetComponent<Collider>(), hit.transform.gameObject.GetComponent<Collider>(), true);
                 }
                
             }
@@ -70,6 +78,14 @@ public class TwoPersonCarry : MonoBehaviour
                     Debug.Log("Found object in range");
                     DropObject();
                     PickupObject(hit.transform.gameObject);
+                    player2.gameObject.GetComponent<Rigidbody>().centerOfMass = new Vector3(0, 0, 0);
+
+                    FixedJoint joint = player2.AddComponent<FixedJoint>();
+                    joint.anchor = hit.point;
+                    joint.connectedBody = hit.transform.GetComponent<Rigidbody>();
+                    joint.enableCollision = false;
+
+                    Physics.IgnoreCollision(player2.GetComponent<Collider>(), hit.transform.gameObject.GetComponent<Collider>(), true);
                 }
             }
             else if (heldObject.transform.parent == player2HoldPosition)
@@ -88,7 +104,7 @@ public class TwoPersonCarry : MonoBehaviour
             if((isHoldingObject(player1, heldObject)) && (isHoldingObject(player2, heldObject)))
             {
                 Debug.Log("Inside condition where both players are holding");
-                
+                //heldObject.gameObject.GetComponent<Rigidbody>().centerOfMass = new Vector3(0, 0, 0);
                 MoveObject(player1HoldPosition);
                 
             }
@@ -116,8 +132,9 @@ public class TwoPersonCarry : MonoBehaviour
             heldObject.transform.position = Vector3.Lerp(heldObject.transform.position, player2.transform.position, 0.5f * Time.deltaTime);
             heldObject.transform.position = Vector3.Lerp(heldObject.transform.position, player1.transform.position, 0.5f * Time.deltaTime);
 
-            player1.transform.position = Vector3.Lerp(player1.transform.position, heldObject.transform.position, 1f * Time.deltaTime);
-            player2.transform.position = Vector3.Lerp(player2.transform.position, heldObject.transform.position, 1f * Time.deltaTime);
+            /*player1.transform.position = Vector3.Lerp(player1.transform.position, heldObject.transform.position, 1f * Time.deltaTime);
+            player2.transform.position = Vector3.Lerp(player2.transform.position, heldObject.transform.position, 1f * Time.deltaTime);*/
+
         }
         else if (player1Holding)
         {
