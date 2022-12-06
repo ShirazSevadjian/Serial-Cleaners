@@ -15,6 +15,19 @@ public class BodybagInteraction : Interactable
         _rigidbody = GetComponentInChildren<Rigidbody>();
     }
 
+    protected override void Update()
+    {
+        base.Update();
+
+        if (currentHandler != null)
+        {
+            Vector3 bonesPositionDelta = (currentHandler.LeftHandBone.position + currentHandler.RightHandBone.position) / 2;
+            Debug.Log("Bone position delta: " + bonesPositionDelta);
+
+            _rigidbodyGrabPoint.position = bonesPositionDelta;
+            //_rigidbodyGrabPoint.MovePosition(bonesPositionDelta);
+        }
+    }
 
     protected override void Interact()
     {
@@ -26,12 +39,21 @@ public class BodybagInteraction : Interactable
 
                 _collider.enabled = false;
                 _rigidbody.useGravity = false;
-                //_rigidbody.isKinematic = true; // The ragdoll should not be kinematic.
+                _rigidbodyGrabPoint.useGravity = false;
+
+                //_rigidbody.isKinematic = true; 
+                //_rigidbodyGrabPoint.isKinematic = true; // The ragdoll should not be kinematic.
+
                 canvas.SetActive(false);
 
-                // Manhandle the ragdoll.
-                //_rigidbodyGrabPoint.isKinematic = true;
 
+                // Manhandle the ragdoll.
+
+                Vector3 bonesPositionDelta = (currentHandler.LeftHandBone.position + currentHandler.RightHandBone.position) / 2;
+                Debug.Log("Bone position delta: " + bonesPositionDelta);
+
+                _rigidbodyGrabPoint.position = bonesPositionDelta;
+                this.gameObject.transform.rotation = Quaternion.Euler(90, 0, 0);
             }
         }
     }
@@ -42,16 +64,18 @@ public class BodybagInteraction : Interactable
 
         _collider.enabled = true;
         _rigidbody.useGravity = true;
-        //_rigidbody.isKinematic = false; 
-        canvas.SetActive(true);
+        _rigidbodyGrabPoint.useGravity = true;
 
+        //_rigidbody.isKinematic = false; 
         //_rigidbodyGrabPoint.isKinematic = false;
+
+        canvas.SetActive(true);
     }
 
     private void OnDestroy()
     {
         currentHandler.Detach();
-        Detach();
+        // Detach();
         
         BodyManager.Instance.DisposeOfBody(gameObject);
     }

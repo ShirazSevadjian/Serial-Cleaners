@@ -32,7 +32,7 @@ public class GenericInteraction : Interactable
     private void OnDestroy()
     {
         currentHandler.Detach();
-        Detach();
+        // Detach();
 
         WeaponsManager.Instance.DisposeOfWeapon(gameObject);
     }
