@@ -8,6 +8,8 @@ public class BodybagInteraction : Interactable
 
     private PlayerInteractable currentHandler;
 
+    private FixedJoint myFixedJoint;
+
 
     protected override void Awake()
     {
@@ -19,14 +21,19 @@ public class BodybagInteraction : Interactable
     {
         base.Update();
 
+        /*
         if (currentHandler != null)
         {
             Vector3 bonesPositionDelta = (currentHandler.LeftHandBone.position + currentHandler.RightHandBone.position) / 2;
             Debug.Log("Bone position delta: " + bonesPositionDelta);
 
-            _rigidbodyGrabPoint.position = bonesPositionDelta;
+            //_rigidbodyGrabPoint.position = bonesPositionDelta;
             //_rigidbodyGrabPoint.MovePosition(bonesPositionDelta);
+
+            Debug.Log("Fixed joint's position: " + myFixedJoint.transform.position);
+            Debug.Log("Fixed joint's position: " + myFixedJoint.connectedBody.transform.position);
         }
+        */
     }
 
     protected override void Interact()
@@ -54,6 +61,11 @@ public class BodybagInteraction : Interactable
 
                 _rigidbodyGrabPoint.position = bonesPositionDelta;
                 this.gameObject.transform.rotation = Quaternion.Euler(90, 0, 0);
+
+                myFixedJoint = player.AddComponent<FixedJoint>();
+                myFixedJoint.anchor = _rigidbodyGrabPoint.position;
+                myFixedJoint.connectedBody = _rigidbodyGrabPoint;
+                myFixedJoint.enableCollision = false;
             }
         }
     }
@@ -70,6 +82,8 @@ public class BodybagInteraction : Interactable
         //_rigidbodyGrabPoint.isKinematic = false;
 
         canvas.SetActive(true);
+
+        Destroy(myFixedJoint);
     }
 
     private void OnDestroy()
