@@ -22,5 +22,12 @@ public class DisposalZone : MonoBehaviour
             // All required actions will be called from the body's "OnDestroy" function.
             Destroy(other.gameObject.GetComponentInParent<BodybagInteraction>().gameObject);
         }
+
+        // Else, verify that it is a destructible object.
+        else if (other.gameObject.GetComponent<GenericInteraction>() != null)
+        {
+            Debug.Log("An object is being disposed of.");
+            Destroy(other.gameObject);
+        }
     }
 }
