@@ -998,8 +998,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 99:99
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6bb17739ad0038640b0c3cee573bab11, type: 2}
-  m_sharedMaterial: {fileID: -2437528813692950889, guid: 6bb17739ad0038640b0c3cee573bab11, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1218,7 +1218,7 @@ MonoBehaviour:
   pausePannel: {fileID: 844330803485743089}
   mainPausePanel: {fileID: 3418758235256635164}
   optionsPausePanel: {fileID: 381191428264278600}
-  timeRemaining_Txt: {fileID: 0}
+  timeRemaining_Txt: {fileID: 3102150122269755987}
   remainingTimerDuration: 60
   gamePaused: 0
   taskManagers: []
@@ -2875,7 +2875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskLabelPrefab: {fileID: 8703308295261513311, guid: b365f49389adc3d468a2c4774ef6f4a7, type: 3}
-  labelHeightShift: -40
+  labelHeightShift: -50
   labelHeightShiftMultiplier: 0
   completedTaskOpacity: 0.75
 --- !u!1 &5332176648899170020
