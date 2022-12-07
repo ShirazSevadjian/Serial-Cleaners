@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 // Inspired by: https://github.com/Comp3interactive/FieldOfView
 
@@ -14,15 +15,29 @@ public class PoliceFieldOfView : MonoBehaviour
 
     private float searchInterval;
 
+    public float lightSwitchTime = 0f;
+    public float lightOnTime = 0.2f;
+    public float lightOffTime = 0.2f;
+
     public GameObject player1;
     public GameObject player2;
 
     public LayerMask targetMask;
     public LayerMask obstructionMask;
 
+    public AudioSource policeSiren;
+
+    public Light blueSiren;
+    public Light redSiren;
+
     public bool spottedPlayer;
 
     private bool searchForPlayers;
+    private bool sirenEnabled = false;
+
+    private Coroutine searchRoutine;
+
+    public NavMeshAgent navAgent;
 
     // Start is called before the first frame update
     void Start()
@@ -31,13 +46,24 @@ public class PoliceFieldOfView : MonoBehaviour
         searchForPlayers = true;
 
         //Start searching for the players
-        StartCoroutine(Search());
+        searchRoutine = StartCoroutine(Search());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //A player was spotted!
+        if (spottedPlayer)
+        {
+            navAgent.isStopped = true;
+            TurnPoliceLightsOn();
+
+            if(!sirenEnabled)
+            {
+                EnableSiren();
+            }
+
+        }
     }
 
 
@@ -48,6 +74,11 @@ public class PoliceFieldOfView : MonoBehaviour
         {
             yield return new WaitForSeconds(searchInterval);
             CheckFieldOfView();
+
+            if (spottedPlayer)
+            {
+                searchForPlayers = false;
+            }
         }
     }
 
@@ -57,10 +88,19 @@ public class PoliceFieldOfView : MonoBehaviour
 
         if (collider.Length != 0)
         {
-            foreach(Collider c in collider){
-                Transform target = c.transform;
-
+            if(collider.Length == 1)
+            {
+                Transform target = collider[0].transform;
                 spottedPlayer = CheckAngle(target);
+            }
+            else
+            {
+                foreach (Collider c in collider)
+                {
+                    Transform target = c.transform;
+
+                    spottedPlayer = CheckAngle(target);
+                }
             }
 
         }
@@ -90,5 +130,52 @@ public class PoliceFieldOfView : MonoBehaviour
         }
 
         return canSeePlayer;
+    }
+
+
+    private void TurnPoliceLightsOn()
+    {
+        if(Time.time > lightSwitchTime)
+        {
+            redSiren.enabled = !redSiren.enabled;
+
+            if (redSiren.enabled)
+            {
+                blueSiren.enabled = false;
+            }
+            else
+            {
+                blueSiren.enabled = true;
+            }
+
+            //Red siren
+            if (redSiren.enabled)
+            {
+                redSiren.intensity = 50f;
+                lightSwitchTime = Time.time + lightOnTime;
+            }
+            else
+            {
+                lightSwitchTime = Time.time + lightOffTime;
+            }
+
+            //Blue siren
+            if (blueSiren.enabled)
+            {
+                blueSiren.intensity = 50f;
+                lightSwitchTime = Time.time + lightOnTime;
+            }
+            else
+            {
+                lightSwitchTime = Time.time + lightOffTime;
+            }
+        }
+    }
+
+    private void EnableSiren()
+    {
+        sirenEnabled = true;
+        policeSiren.loop = true;
+        policeSiren.Play();
     }
 }
