@@ -21,6 +21,12 @@ public class PlayerInputHandler : MonoBehaviour
 
         // TODO: Instead of random, let player chose which character to play
         player = Instantiate(CharactersPrefabs[Random.Range(0, CharactersPrefabs.Count)], spawnPos, Quaternion.LookRotation(spawnRot, Vector3.up), transform).GetComponent<PlayerMovement>();
+
+        SkinnedMeshRenderer playerMesh = player.transform.GetComponentInChildren<SkinnedMeshRenderer>();
+        Material[] modelMaterials = playerMesh.materials;
+
+        modelMaterials[1].color = Random.ColorHSV(0, 1, 1, 1, 0.5f, 0.5f, 1, 1);
+
     }
 
     public void Move(InputAction.CallbackContext context)
