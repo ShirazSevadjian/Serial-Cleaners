@@ -17,6 +17,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject mainPausePanel;
     [SerializeField] private GameObject optionsPausePanel;
     [SerializeField] private TMPro.TMP_Text timeRemaining_Txt;
+    [SerializeField] private UnityEngine.UI.Slider starSlider;
 
     // Parameters.
     [SerializeField] private float remainingTimerDuration;
@@ -216,7 +217,24 @@ public class LevelManager : MonoBehaviour
         victoryEvent.Invoke();
 
         // Update the global level manager.
-        GlobalLevelManager.CompletedLevel(currentLvl.index, remainingTimerDuration, 2);
+        float ratio = remainingTimerDuration / currentLvl.baseLvlDuration;
+
+        int stars = 0;
+        switch (ratio)
+        {
+            case 0.666f:
+                stars = 3;
+                break;
+            case 0.333f:
+                stars = 2;
+                break;
+            case 0.1f:
+                stars = 1;
+                break;
+        }
+
+        starSlider.value = stars;
+        GlobalLevelManager.CompletedLevel(currentLvl.index, remainingTimerDuration, stars);
 
         // Load either the next scene, or the final victory screen.
         /*

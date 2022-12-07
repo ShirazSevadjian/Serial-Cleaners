@@ -27,12 +27,17 @@ public class PoliceLights : MonoBehaviour
     {
         if (invert)
         {
-            image.DOColor(blueColor, 0.2f).SetLoops(-1, LoopType.Yoyo).SetUpdate(true);
+            image.DOColor(blueColor, 0.2f).SetLoops(-1, LoopType.Yoyo).SetUpdate(true).SetAutoKill(true);
         }
         else
         {
-            image.DOColor(redColor, 0.2f).SetLoops(-1, LoopType.Yoyo).SetUpdate(true);
+            image.DOColor(redColor, 0.2f).SetLoops(-1, LoopType.Yoyo).SetUpdate(true).SetAutoKill(true);
         }
+    }
+
+    private void OnDestroy()
+    {
+        
     }
 
 }
