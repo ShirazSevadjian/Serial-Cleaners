@@ -5,16 +5,17 @@ using UnityEngine;
 public class GlobalLevelManager : MonoBehaviour
 {
     [SerializeField] private int numberOfLevels = 4;
+    public int NumberOfLevels { get; }
 
     private static Dictionary<int, LevelInfo> levelProgression;
 
-    public static GlobalLevelManager instance { get; private set; }
+    public static GlobalLevelManager Instance { get; private set; }
 
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
 
             levelProgression = new Dictionary<int, LevelInfo>();
