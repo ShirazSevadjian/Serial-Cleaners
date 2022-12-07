@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!162 &1
+
 EditorUserSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedScenePath-0:
-      value: 22424703114646680e0b0227036c7315001214396304030608055d60add3373dece225a9b6751c343c0fe63f05324113f308471ef8021e12
+      value: 22424703114646680e0b0227036c731500121439631c3324223b1432eeae2136ebf32f
       flags: 0
     RecentlyUsedScenePath-1:
       value: 22424703114646680e0b0227036c7315001214396304030608055d62adcc3b2fd2e83af0ce342b392b0be02e3b1a0432fd4a5845e305031f08
