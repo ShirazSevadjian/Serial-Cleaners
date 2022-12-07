@@ -10,13 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adcc085391e7d994a859f2fa204b6908, type: 3}
-  m_Name: Tutorial
+  m_Name: Level_2_Hospital
   m_EditorClassIdentifier: 
-  index: 0
-  lvlName: Tutorial
+  index: 2
+  lvlName: Hospital
   baseLvlDuration: 60
-  tasksInvolved:
-  - taskReference: {fileID: 11400000, guid: f3eac03a0e3583640b642644d13f3dba, type: 2}
-    doTaskXTimes: 3
-  - taskReference: {fileID: 11400000, guid: d4a131bd4607c884e85b8a244d8a6d12, type: 2}
-    doTaskXTimes: 2
+  tasksInvolved: []
