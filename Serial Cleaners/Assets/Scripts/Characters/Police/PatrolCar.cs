@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PoliceCar : MonoBehaviour
+public class PatrolCar : MonoBehaviour
 {
     [SerializeField]
     public NavMeshAgent agent;
