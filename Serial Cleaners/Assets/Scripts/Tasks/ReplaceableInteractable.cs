@@ -68,6 +68,7 @@ public class ReplaceableInteractable : Interactable
         Destroy(_collider);
 
         // Update the manager.
+        FurnitureManager.Instance.FurnitureRePlaced(gameObject);
     }
 
 
