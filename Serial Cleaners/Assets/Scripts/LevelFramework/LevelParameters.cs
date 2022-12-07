@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Level_", menuName = "ScriptableObjects/Level Parameters", order = 1)]
 public class LevelParameters : ScriptableObject
 {
+    public int index;
     public string lvlName; // The level's name as a string.
     
     public float baseLvlDuration; // The level's base time duration in second.

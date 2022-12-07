@@ -33,9 +33,6 @@ public class LevelManager : MonoBehaviour
 
     public float difficultyMultiplier = 1; // Temporary, integrate difficulty as its own thing.
 
-
-
-
     // EVENTS.
     public UnityEvent_float levelStartEvent;
     public UnityEvent_string levelEndEvent;
@@ -82,7 +79,6 @@ public class LevelManager : MonoBehaviour
         defeatEvent.AddListener(LevelEventListener);
         levelTimerTick.AddListener(LevelEventListener);
 
-
         // Start the level. Delay?
         levelTimerTick.Invoke(remainingTimerDuration);
         StartLevel();
@@ -122,7 +118,6 @@ public class LevelManager : MonoBehaviour
         ResetParameters(currentLvl);
     }
 
-
     // These are public so that other scripts can call them using the level manager's instance.
     // Start of level method.
     public void StartLevel(bool resetTimer = false)
@@ -131,11 +126,9 @@ public class LevelManager : MonoBehaviour
         {
             Debug.Log("Level is starting.");
 
-
             // Set up task managers from those referenced in the level's parameters.
             SetUpTasksAndManagers();
-            
-            
+
             // If requested, restart the timer.
             if (resetTimer)
                 SetTimerDuration(currentLvl.baseLvlDuration);
@@ -171,8 +164,6 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-
-
     // End of level method.
     public void EndLevel()
     {
@@ -196,6 +187,7 @@ public class LevelManager : MonoBehaviour
             else DoFailure();
         }
     }
+
     /*
     public void LevelChecker() // What is this used for?
     {
@@ -206,16 +198,15 @@ public class LevelManager : MonoBehaviour
     }
     */
 
-
     private bool VictoryConditionsMet()
     {
         // Loop through the task managers and verify whether their tasks have been completed.
         foreach (TaskManager tm in taskManagers)
         {
             // Return false as soon as one has not.
-            if (!tm.IsTaskDone) 
+            if (!tm.IsTaskDone)
                 return false;
-        } 
+        }
         // Else, return true.
         return true;
     }
@@ -223,6 +214,7 @@ public class LevelManager : MonoBehaviour
     private void DoVictory()
     {
         victoryEvent.Invoke();
+        GlobalLevelManager.CompletedLevel(currentLvl.index, remainingTimerDuration, 2);
     }
 
     private void DoFailure()
@@ -256,7 +248,6 @@ public class LevelManager : MonoBehaviour
         // Send end of level event.
         EndLevel();
     }
-
 
     // PAUSE
     private void PauseGame()
