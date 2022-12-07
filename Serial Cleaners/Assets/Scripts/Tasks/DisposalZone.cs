@@ -24,7 +24,7 @@ public class DisposalZone : MonoBehaviour
         }
 
         // Else, verify that it is a destructible object.
-        else if (other.gameObject.GetComponent<GenericInteraction>() != null)
+        else if (other.gameObject.GetComponent<GenericInteractable>() != null)
         {
             Debug.Log("An object is being disposed of.");
             Destroy(other.gameObject);

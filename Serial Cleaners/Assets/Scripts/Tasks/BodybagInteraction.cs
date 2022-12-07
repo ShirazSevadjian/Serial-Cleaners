@@ -88,9 +88,11 @@ public class BodybagInteraction : Interactable
 
     private void OnDestroy()
     {
-        currentHandler.Detach();
+        if(currentHandler != null)
+            currentHandler.Detach();
+
         // Detach();
-        
+
         BodyManager.Instance.DisposeOfBody(gameObject);
     }
 }

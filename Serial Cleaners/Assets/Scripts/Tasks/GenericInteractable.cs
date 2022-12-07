@@ -1,7 +1,8 @@
 
-public class GenericInteraction : Interactable
+public class GenericInteractable : Interactable
 {
     private PlayerInteractable currentHandler;
+
 
     protected override void Interact()
     {
@@ -31,7 +32,8 @@ public class GenericInteraction : Interactable
 
     private void OnDestroy()
     {
-        currentHandler.Detach();
+        if (currentHandler != null)   
+            currentHandler.Detach();
         // Detach();
 
         WeaponsManager.Instance.DisposeOfWeapon(gameObject);

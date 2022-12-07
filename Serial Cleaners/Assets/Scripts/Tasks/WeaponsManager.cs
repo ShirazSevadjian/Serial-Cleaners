@@ -21,10 +21,10 @@ public class WeaponsManager : TaskManager
     private void Start()
     {
         // Collect the weapons / evidence into our list.
-        GenericInteraction[] weaponsArray = FindObjectsOfType<GenericInteraction>();
+        GenericInteractable[] weaponsArray = FindObjectsOfType<GenericInteractable>();
 
         weapons = new List<GameObject>();
-        foreach (GenericInteraction body in weaponsArray)
+        foreach (GenericInteractable body in weaponsArray)
         {
             weapons.Add(body.gameObject);
         }
