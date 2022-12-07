@@ -96,7 +96,6 @@ public class LevelManager : MonoBehaviour
 
     }
 
-
     // MANAGEMENT METHODS.
     private void SetParameters(LevelParameters lvlParams)
     {
@@ -125,6 +124,7 @@ public class LevelManager : MonoBehaviour
         if (!isLevelActive)
         {
             Debug.Log("Level is starting.");
+            Time.timeScale = 1.0f;
 
             // Set up task managers from those referenced in the level's parameters.
             SetUpTasksAndManagers();
@@ -233,6 +233,7 @@ public class LevelManager : MonoBehaviour
     {
         defeatEvent.Invoke();
 
+
         // Load the failure screen.
         // LoadScene();
     }
@@ -246,8 +247,6 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(sceneID, LoadSceneMode.Single);
     }
-
-
 
     // TIMER.
     private void SetTimerDuration(float baseLevelDuration)
