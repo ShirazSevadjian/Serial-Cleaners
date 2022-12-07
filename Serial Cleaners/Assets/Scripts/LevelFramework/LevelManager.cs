@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -214,13 +214,40 @@ public class LevelManager : MonoBehaviour
     private void DoVictory()
     {
         victoryEvent.Invoke();
+
+        // Update the global level manager.
         GlobalLevelManager.CompletedLevel(currentLvl.index, remainingTimerDuration, 2);
+
+        // Load either the next scene, or the final victory screen.
+        /*
+        // Are we currently on the last level?
+        if (currentLvl.index == GlobalLevelManager.Instance.NumberOfLevels)
+        {
+            LoadScene();
+        }
+       else LoadScene();
+        */
     }
 
     private void DoFailure()
     {
         defeatEvent.Invoke();
+
+        // Load the failure screen.
+        // LoadScene();
     }
+
+    // SCENE MANAGEMENT.
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+    }
+    public void LoadScene(int sceneID)
+    {
+        SceneManager.LoadSceneAsync(sceneID, LoadSceneMode.Single);
+    }
+
+
 
     // TIMER.
     private void SetTimerDuration(float baseLevelDuration)
