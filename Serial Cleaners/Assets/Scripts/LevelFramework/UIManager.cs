@@ -33,6 +33,12 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void Retry()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        LoadLevel(currentScene.buildIndex);
+    }
+
     public void Quit()
     {
         Application.Quit();
