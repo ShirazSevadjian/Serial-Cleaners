@@ -6476,27 +6476,31 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: bc14bf9aef3ccab478e45470d45ec349, type: 2}
     - target: {fileID: 1885500215353258900, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
       propertyPath: defeatEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1885500215353258900, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
       propertyPath: defeatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1885500215353258900, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
       propertyPath: defeatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1234768345}
+      objectReference: {fileID: 1988352573}
     - target: {fileID: 1885500215353258900, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
       propertyPath: defeatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1885500215353258900, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
       propertyPath: defeatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadGameOver
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 1885500215353258900, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
       propertyPath: defeatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PoliceFieldOfView, Assembly-CSharp
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1885500215353258900, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
+      propertyPath: defeatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1885500215353258900, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
       propertyPath: defeatEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -15115,7 +15119,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612357919}
-  m_LocalRotation: {x: 0.0010571114, y: 0.8879026, z: -0.4600258, w: 0.0020403466}
+  m_LocalRotation: {x: 0.0010570842, y: 0.8879026, z: -0.46002576, w: 0.002040294}
   m_LocalPosition: {x: 5.2117953, y: 40.2, z: 39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -31912,7 +31916,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320527858}
-  m_LocalRotation: {x: 0.0010571114, y: 0.8879026, z: -0.4600258, w: 0.0020403466}
+  m_LocalRotation: {x: 0.0010570842, y: 0.8879026, z: -0.46002576, w: 0.002040294}
   m_LocalPosition: {x: 0, y: 0, z: 39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -47190,6 +47194,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4575402787804550353, guid: ab3ab68971a7087429643dfbfab39551, type: 3}
   m_PrefabInstance: {fileID: 1980612858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1988352573 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4052549659654715562, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
+  m_PrefabInstance: {fileID: 278220605}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1988461575
 GameObject:
