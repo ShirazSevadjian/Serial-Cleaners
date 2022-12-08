@@ -23,8 +23,8 @@ public class FieldOfViewEditor : Editor
         if(fieldOfView.spottedPlayer)
         {
             Handles.color = Color.yellow;
-            Handles.DrawLine(fieldOfView.transform.position, fieldOfView.player1.transform.position);
-            Handles.DrawLine(fieldOfView.transform.position, fieldOfView.player2.transform.position);
+            //Handles.DrawLine(fieldOfView.transform.position, fieldOfView.player1.transform.position);
+            //Handles.DrawLine(fieldOfView.transform.position, fieldOfView.player2.transform.position);
         }
        
     }

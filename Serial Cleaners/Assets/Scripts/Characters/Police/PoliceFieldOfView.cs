@@ -19,8 +19,8 @@ public class PoliceFieldOfView : MonoBehaviour
     public float lightOnTime = 0.2f;
     public float lightOffTime = 0.2f;
 
-    public GameObject player1;
-    public GameObject player2;
+/*    public GameObject player1;
+    public GameObject player2;*/
 
     public LayerMask targetMask;
     public LayerMask obstructionMask;
@@ -182,7 +182,7 @@ public class PoliceFieldOfView : MonoBehaviour
 
     private IEnumerator GameOver()
     {
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSecondsRealtime(2);
         LevelManager.Instance.EndLevel();
     }
 }
