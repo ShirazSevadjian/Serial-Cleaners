@@ -8,6 +8,9 @@ public class AddCharacterToCamera : MonoBehaviour
 {
     CinemachineTargetGroup targetGroup;
 
+    [SerializeField]
+    Transform DefaultCameraTarget;
+
     private void Start()
     {
         targetGroup = GetComponent<CinemachineTargetGroup>();
@@ -22,6 +25,10 @@ public class AddCharacterToCamera : MonoBehaviour
     {
         PlayerInputHandler handler = player.GetComponent<PlayerInputHandler>();
         yield return new WaitUntil(() => handler.GetPlayer() != null);
+
+        int defaultTargetIndex = targetGroup.FindMember(DefaultCameraTarget);
+        if (defaultTargetIndex >= 0)
+            targetGroup.RemoveMember(DefaultCameraTarget);
         targetGroup.AddMember(handler.GetPlayer().transform, 1f, 0f);
     }
 }
