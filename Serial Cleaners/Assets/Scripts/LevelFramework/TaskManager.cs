@@ -56,5 +56,9 @@ public class TaskManager : MonoBehaviour
     protected void OnTaskDone()
     {
         Debug.Log(string.Format("The task '{0}' has been completed.", taskReference.taskText));
+
+        // Check if other tasks are also done. If so, end the level.
+        if (LevelManager.Instance.VictoryConditionsMet())
+            LevelManager.Instance.EndLevel();
     }
 }

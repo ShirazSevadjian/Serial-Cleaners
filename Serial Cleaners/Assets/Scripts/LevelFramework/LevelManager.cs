@@ -199,7 +199,7 @@ public class LevelManager : MonoBehaviour
     }
     */
 
-    private bool VictoryConditionsMet()
+    public bool VictoryConditionsMet()
     {
         // Loop through the task managers and verify whether their tasks have been completed.
         foreach (TaskManager tm in taskManagers)
