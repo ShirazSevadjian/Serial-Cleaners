@@ -50,6 +50,11 @@ public class PlayerInputHandler : MonoBehaviour
 
     }
 
+    public void Pickup(InputAction.CallbackContext context)
+    {
+        
+    }
+
     public PlayerMovement GetPlayer()
     {
         return player;
