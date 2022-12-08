@@ -61,7 +61,7 @@ public class BloodPuddle : MonoBehaviour
             if (!aged || other.GetComponent<MopCleaner>().Wet)
             {
                 Ray ray = new Ray(other.transform.position, -Vector3.up);
-                if (Physics.Raycast(ray, out RaycastHit hitInfo, 2.0f))
+                if (Physics.Raycast(ray, out RaycastHit hitInfo, 5.0f))
                 {
                     Vector2 textureCoord = hitInfo.textureCoord;
                     int pixelX = (int)(textureCoord.x * templateMask.width);

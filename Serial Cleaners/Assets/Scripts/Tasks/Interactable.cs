@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(SphereCollider))]
 public abstract class Interactable : MonoBehaviour
@@ -7,6 +8,7 @@ public abstract class Interactable : MonoBehaviour
     [SerializeField] protected Transform rightHandPosition;
     [SerializeField] protected Transform leftHandPosition;
 
+    private bool _pressed;
     protected SphereCollider _collider;
     protected Rigidbody _rigidbody;
 
@@ -26,10 +28,10 @@ public abstract class Interactable : MonoBehaviour
         // If players inputs either "e" or "X" button in the controller
         if (_isInside)
         {
-            if (Input.GetButtonDown("Interact"))
+            if (player.GetComponentInParent<PlayerInput>().actions["Pickup"].IsPressed())//Input.GetButtonDown("Interact"))
             {
                 Interact();
-            }
+            } 
         }
     }
 

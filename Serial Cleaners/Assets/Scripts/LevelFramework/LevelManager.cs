@@ -251,7 +251,6 @@ public class LevelManager : MonoBehaviour
     {
         defeatEvent.Invoke();
 
-
         // Load the failure screen.
         // LoadScene();
     }
