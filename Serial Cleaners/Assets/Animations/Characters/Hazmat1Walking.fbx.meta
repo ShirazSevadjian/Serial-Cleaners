@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 871aa28450218f240a06754c1eb0ba25
+guid: 1855c4752b0d2d848a2ca9d49faf5795
 ModelImporter:
   serializedVersion: 20300
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Hazmat1IdleStanding
+    second: Hazmat1Walking
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -18,7 +18,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Copied Avatar Rig Configuration mis-match. Transform hierarchy
+      does not match:\n\tTransform 'Armature' not found in HumanDescription.\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -35,11 +36,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Hazmat1IdleStanding
+      name: Hazmat1Walking
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 180
+      lastFrame: 31
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
