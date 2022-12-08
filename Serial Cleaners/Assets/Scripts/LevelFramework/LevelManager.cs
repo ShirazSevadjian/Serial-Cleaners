@@ -17,6 +17,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject mainPausePanel;
     [SerializeField] private GameObject optionsPausePanel;
     [SerializeField] private TMPro.TMP_Text timeRemaining_Txt;
+    [SerializeField] private TMPro.TMP_Text scoreTimeRemaining_Txt;
     [SerializeField] private UnityEngine.UI.Slider starSlider;
 
     [Header("Texture")]
@@ -183,7 +184,7 @@ public class LevelManager : MonoBehaviour
                 StopCoroutine(timerDecreaseCoroutine);
             Debug.Log(string.Format("There are {0} seconds left to the timer.", remainingTimerDuration));
             // Save the remaining time duration to a text file.
-            timeRemaining_Txt.text = remainingTimerDuration.ToString() + "s";
+            //timeRemaining_Txt.text = remainingTimerDuration.ToString() + "s";
 
             // Do checks. Was everything properly cleaned up?
             if (VictoryConditionsMet())
@@ -221,22 +222,23 @@ public class LevelManager : MonoBehaviour
 
         // Update the global level manager.
         float ratio = remainingTimerDuration / currentLvl.baseLvlDuration;
+        print(ratio);
 
-        int stars = 0;
-        switch (ratio)
+        int stars = 3;
+        if (ratio < 0.666f)
         {
-            case 0.666f:
-                stars = 3;
-                break;
-            case 0.333f:
-                stars = 2;
-                break;
-            case 0.1f:
-                stars = 1;
-                break;
+            stars = 2;
+        }
+        else if (ratio < 0.333f)
+        {
+            stars = 1;
         }
 
+        int minutes = Mathf.RoundToInt(remainingTimerDuration / 60);
+        int seconds = Mathf.RoundToInt(remainingTimerDuration % 60);
+
         starSlider.value = stars;
+        scoreTimeRemaining_Txt.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         GlobalLevelManager.CompletedLevel(currentLvl.index, remainingTimerDuration, stars);
 
         // Load either the next scene, or the final victory screen.

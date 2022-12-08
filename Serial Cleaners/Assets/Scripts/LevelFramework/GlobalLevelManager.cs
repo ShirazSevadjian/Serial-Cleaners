@@ -44,6 +44,10 @@ public class GlobalLevelManager : MonoBehaviour
                 levelProgression[index].bestTime = timeRemaining;
             }
 
+            if (levelProgression.ContainsKey(index + 1))
+            {
+                levelProgression[index + 1].unlocked = true;
+            }
         }
     }
 

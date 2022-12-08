@@ -36,15 +36,18 @@ public class MainMenuManager : MonoBehaviour
         {
             if (levelProgression[index].completed)
             {
+                int minutes = Mathf.RoundToInt(levelProgression[index].bestTime / 60);
+                int seconds = Mathf.RoundToInt(levelProgression[index].bestTime % 60);
+
                 levelLocks[index].SetActive(false);
                 levelButtons[index].interactable = true;
-                levelText[index].text = "Best Time" + levelProgression[index].bestTime.ToString() + "s";
+                levelText[index].text = "Best Time: " + string.Format("{0:00}:{1:00}", minutes, seconds); ;
                 levelScore[index].SetValueWithoutNotify(levelProgression[index].stars);
             }
             else
             {
-                levelLocks[index].SetActive(true);
-                levelButtons[index].interactable = false;
+                levelLocks[index].SetActive(!levelProgression[index].unlocked);
+                levelButtons[index].interactable = levelProgression[index].unlocked;
                 levelText[index].text = "NOT COMPLETED";
                 levelScore[index].SetValueWithoutNotify(0);
             }
@@ -52,6 +55,8 @@ public class MainMenuManager : MonoBehaviour
 
         levelLocks[0].SetActive(false);
         levelButtons[0].interactable = true;
+        levelLocks[1].SetActive(false);
+        levelButtons[1].interactable = true;
     }
 
     public void PanelToggle(int position)

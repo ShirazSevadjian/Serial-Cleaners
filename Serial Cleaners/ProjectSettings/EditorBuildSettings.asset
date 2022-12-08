@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Tutorial.unity
     guid: 804131eef502d7449a30fdbed30ff9b2
+  - enabled: 1
+    path: Assets/Scenes/Levels/LEVEL 1 new/LowPolyInterior_Demo 1.unity
+    guid: 8bdc62e6c342a5c4ea4d133e322c3a36
   m_configObjects: {}
