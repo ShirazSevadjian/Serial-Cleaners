@@ -37,8 +37,12 @@ public class GlobalLevelManager : MonoBehaviour
         if (levelProgression.ContainsKey(index))
         {
             levelProgression[index].completed = true;
-            levelProgression[index].bestTime = timeRemaining;
             levelProgression[index].stars = stars;
+
+            if(levelProgression[index].bestTime < timeRemaining)
+            {
+                levelProgression[index].bestTime = timeRemaining;
+            }
 
         }
     }
