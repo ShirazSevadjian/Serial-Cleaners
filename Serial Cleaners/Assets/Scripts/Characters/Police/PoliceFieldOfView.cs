@@ -63,6 +63,7 @@ public class PoliceFieldOfView : MonoBehaviour
                 EnableSiren();
             }
 
+            StartCoroutine(GameOver());
         }
     }
 
@@ -177,5 +178,11 @@ public class PoliceFieldOfView : MonoBehaviour
         sirenEnabled = true;
         policeSiren.loop = true;
         policeSiren.Play();
+    }
+
+    private IEnumerator GameOver()
+    {
+        yield return new WaitForSecondsRealtime(3);
+        LevelManager.Instance.EndLevel();
     }
 }

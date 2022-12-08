@@ -28,6 +28,11 @@ public class CarFieldOfView : MonoBehaviour
 
     public NavMeshAgent navAgent;
 
+    public float timeLoss = 3f;
+
+    private bool substractTime = false;
+    private bool isRunningPauseAgent = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,17 +53,33 @@ public class CarFieldOfView : MonoBehaviour
             {
                 PlayHorn();
             }
-            StartCoroutine(PauseAgent());
-            //TODO Decrease player time
+
+            if (!substractTime)
+            {
+                LoseTime();
+            }
+
+            if (!isRunningPauseAgent)
+            {
+                StartCoroutine(PauseAgent());
+                isRunningPauseAgent = true;
+            }
+            
+
+           
         }
     }
 
     private IEnumerator PauseAgent()
     {
         navAgent.isStopped = true;
-        yield return new WaitForSecondsRealtime(5);
+       
+        yield return new WaitForSecondsRealtime(10);
+
         navAgent.isStopped = false;
         sirenEnabled = false;
+        substractTime = false;
+        isRunningPauseAgent = false;
     }
     private IEnumerator Search()
     {
@@ -124,5 +145,11 @@ public class CarFieldOfView : MonoBehaviour
     {
         sirenEnabled = true;
         carHorn.Play();
+    }
+
+    private void LoseTime()
+    {
+        substractTime = true;
+        LevelManager.Instance.SubstractTime(timeLoss);
     }
 }

@@ -293,6 +293,21 @@ public class LevelManager : MonoBehaviour
         EndLevel();
     }
 
+    // Method to decrease given seconds from the timer
+    public void SubstractTime(float seconds)
+    {
+        StartCoroutine(MakeTimerRed());
+        remainingTimerDuration -= seconds;
+    }
+
+    // Turns the timer red for 3 seconds (Used in SubstractTime method)
+    private IEnumerator MakeTimerRed()
+    {
+        timeRemaining_Txt.color = Color.red;
+        yield return new WaitForSecondsRealtime(3);
+        timeRemaining_Txt.color = Color.white;
+    }
+
     // PAUSE
     private void PauseGame()
     {
