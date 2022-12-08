@@ -7137,7 +7137,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 462246119393136521}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: SetQuality
+        m_MethodName: LoadLevel
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
