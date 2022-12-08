@@ -16,7 +16,7 @@ public class PlayerInputHandler : MonoBehaviour
         Transform spawnPlane = GameObject.Find("SpawnPlane")?.transform;
         Vector3 bottomLeft = spawnPlane.TransformPoint(new Vector3(5, 0, 5));
         Vector3 topRight = spawnPlane.TransformPoint(new Vector3(-5, 0, -5));
-        Vector3 spawnPos = new Vector3(Random.Range(bottomLeft.x, topRight.x), 0, Random.Range(bottomLeft.z, topRight.z));
+        Vector3 spawnPos = new Vector3(Random.Range(bottomLeft.x, topRight.x), spawnPlane.position.y, Random.Range(bottomLeft.z, topRight.z));
         Vector3 spawnRot = new Vector3(0, 0, -1);
 
         // TODO: Instead of random, let player chose which character to play
