@@ -1760,7 +1760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a9d4746a5974e540aeccfb5bf9576bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  master: {fileID: 0}
+  master: {fileID: 24100000, guid: 52028c25db2db644394017c3860b57a6, type: 2}
 --- !u!114 &8050026421379239155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1794,6 +1794,7 @@ MonoBehaviour:
   optionsPausePanel: {fileID: 381191428264278600}
   timeRemaining_Txt: {fileID: 3102150122269755987}
   starSlider: {fileID: 1960932745251817391}
+  BrushTexture: {fileID: 2800000, guid: e6b35bf4847d0ea478a2a63c62ed6233, type: 3}
   remainingTimerDuration: 60
   gamePaused: 0
   taskManagers: []

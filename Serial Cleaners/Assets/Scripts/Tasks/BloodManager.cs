@@ -13,7 +13,6 @@ public class BloodManager : TaskManager
     [SerializeField] private UnityEvent onPuddlesDone; // These events will have to be handled differently.
     [SerializeField] private UnityEvent onOnePuddleDonce;
 
-
     public static BloodManager Instance { get; private set; }
     public bool AllPuddlesCleaned { get { return CheckIfTaskDone(); } }
     public Texture2D BrushTexture { get => brushTexture; }

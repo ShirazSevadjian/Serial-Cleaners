@@ -60,3 +60,4 @@ crashlytics-build.properties
 
 # Don't keep track of the project Versions
 **/Serial Cleaners/ProjectSettings/ProjectVersion.txt
+**/Serial Cleaners/UserSettings/EditorUserSettings/EditorUserSettings.asset

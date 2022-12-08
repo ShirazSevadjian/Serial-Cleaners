@@ -19,6 +19,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private TMPro.TMP_Text timeRemaining_Txt;
     [SerializeField] private UnityEngine.UI.Slider starSlider;
 
+    [Header("Texture")]
+    [SerializeField] public Texture2D BrushTexture;
+
     // Parameters.
     [SerializeField] private float remainingTimerDuration;
     public bool gamePaused;
