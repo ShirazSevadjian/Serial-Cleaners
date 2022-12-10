@@ -5331,19 +5331,19 @@ PrefabInstance:
       objectReference: {fileID: 1320527864}
     - target: {fileID: 2682300972588391345, guid: cc988f450d73805469b2b0f77404c987, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.94675267
+      value: 0.94675255
       objectReference: {fileID: 0}
     - target: {fileID: 2682300972588391345, guid: cc988f450d73805469b2b0f77404c987, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.31716877
+      value: -0.3171689
       objectReference: {fileID: 0}
     - target: {fileID: 2682300972588391345, guid: cc988f450d73805469b2b0f77404c987, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.05248184
+      value: 0.052481834
       objectReference: {fileID: 0}
     - target: {fileID: 2682300972588391345, guid: cc988f450d73805469b2b0f77404c987, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.017581785
+      value: 0.01758179
       objectReference: {fileID: 0}
     - target: {fileID: 7491351355814043075, guid: cc988f450d73805469b2b0f77404c987, type: 3}
       propertyPath: m_Name
@@ -15418,7 +15418,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612357919}
-  m_LocalRotation: {x: 0.0010570924, y: 0.8879026, z: -0.46002582, w: 0.0020403096}
+  m_LocalRotation: {x: 0.0010570842, y: 0.8879026, z: -0.46002576, w: 0.002040294}
   m_LocalPosition: {x: 5.2117953, y: 40.2, z: 39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -19817,7 +19817,7 @@ GameObject:
   - component: {fileID: 770626095}
   - component: {fileID: 770626094}
   m_Layer: 0
-  m_Name: TestDisposalZone
+  m_Name: DisposalZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32673,7 +32673,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320527858}
-  m_LocalRotation: {x: 0.0010570924, y: 0.8879026, z: -0.46002582, w: 0.0020403096}
+  m_LocalRotation: {x: 0.0010570842, y: 0.8879026, z: -0.46002576, w: 0.002040294}
   m_LocalPosition: {x: 0, y: 0, z: 39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
