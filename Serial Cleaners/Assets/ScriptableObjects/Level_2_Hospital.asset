@@ -15,4 +15,12 @@ MonoBehaviour:
   index: 2
   lvlName: Hospital
   baseLvlDuration: 60
-  tasksInvolved: []
+  tasksInvolved:
+  - taskReference: {fileID: 11400000, guid: f3eac03a0e3583640b642644d13f3dba, type: 2}
+    doTaskXTimes: 3
+  - taskReference: {fileID: 11400000, guid: d4a131bd4607c884e85b8a244d8a6d12, type: 2}
+    doTaskXTimes: 4
+  - taskReference: {fileID: 11400000, guid: 7c8310ea2a17b5846af0db762923ba78, type: 2}
+    doTaskXTimes: 1
+  - taskReference: {fileID: 11400000, guid: 875bae3644471b349bf77bfc9d9dacf1, type: 2}
+    doTaskXTimes: 3
