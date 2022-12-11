@@ -6,7 +6,8 @@ public class DisposalZone : MonoBehaviour
 {
     [SerializeField] private Collider myCollider;
 
-    [SerializeField] private GameObject particleHitEffect;
+    [SerializeField] private GameObject particleEffectBody;
+    [SerializeField] private GameObject particleEffectEvidence;
 
 
     // METHODS
@@ -25,7 +26,7 @@ public class DisposalZone : MonoBehaviour
             Destroy(other.gameObject.GetComponentInParent<BodybagInteraction>().gameObject);
 
             // Do particle effect.
-            GameObject effect = Instantiate(particleHitEffect, other.transform.position, Quaternion.identity);;
+            GameObject effect = Instantiate(particleEffectBody, other.transform.position, Quaternion.identity);;
             Destroy(effect, 1f);
         }
 
@@ -36,7 +37,7 @@ public class DisposalZone : MonoBehaviour
             Destroy(other.gameObject);
 
             // Do particle effect.
-            GameObject effect = Instantiate(particleHitEffect, other.transform.position, Quaternion.identity); ;
+            GameObject effect = Instantiate(particleEffectEvidence, other.transform.position, Quaternion.identity); ;
             Destroy(effect, 1f);
         }
     }
