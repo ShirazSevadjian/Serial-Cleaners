@@ -6,6 +6,8 @@ public class DisposalZone : MonoBehaviour
 {
     [SerializeField] private Collider myCollider;
 
+    [SerializeField] private GameObject particleHitEffect;
+
 
     // METHODS
     void Start()
@@ -21,6 +23,10 @@ public class DisposalZone : MonoBehaviour
             // Debug.Log("A body is being disposed of.");
             // All required actions will be called from the body's "OnDestroy" function.
             Destroy(other.gameObject.GetComponentInParent<BodybagInteraction>().gameObject);
+
+            // Do particle effect.
+            GameObject effect = Instantiate(particleHitEffect, other.transform.position, Quaternion.identity);;
+            Destroy(effect, 1f);
         }
 
         // Else, verify that it is a destructible object.
@@ -28,6 +34,10 @@ public class DisposalZone : MonoBehaviour
         {
             Debug.Log("An object is being disposed of.");
             Destroy(other.gameObject);
+
+            // Do particle effect.
+            GameObject effect = Instantiate(particleHitEffect, other.transform.position, Quaternion.identity); ;
+            Destroy(effect, 1f);
         }
     }
 }

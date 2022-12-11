@@ -3,7 +3,9 @@ guid: 134efb428132fd043bbfc9cce7eca673
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - myCollider: {instanceID: 0}
+  - particleHitEffect: {fileID: 164672, guid: 132283b6c2baa5148bcd425b39982c90, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
