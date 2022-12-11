@@ -62,6 +62,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Detach"",
+                    ""type"": ""Button"",
+                    ""id"": ""ecc499c4-0826-42f0-a8ae-93d687db3fdf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -156,7 +165,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""ab5cd828-b873-4335-938c-667f0c423736"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/enter"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -178,11 +187,33 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""0a3fb5e8-99a2-4481-b577-d2053357e232"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Pickup"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4b42acb2-a527-45dd-8d9d-a14d187d6d46"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Detach"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a5966668-a967-479b-a00c-bd36a25446d0"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Detach"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -197,6 +228,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Gameplay_Look = m_Gameplay.FindAction("Look", throwIfNotFound: true);
         m_Gameplay_Submit = m_Gameplay.FindAction("Submit", throwIfNotFound: true);
         m_Gameplay_Pickup = m_Gameplay.FindAction("Pickup", throwIfNotFound: true);
+        m_Gameplay_Detach = m_Gameplay.FindAction("Detach", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -260,6 +292,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Look;
     private readonly InputAction m_Gameplay_Submit;
     private readonly InputAction m_Gameplay_Pickup;
+    private readonly InputAction m_Gameplay_Detach;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -268,6 +301,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_Gameplay_Look;
         public InputAction @Submit => m_Wrapper.m_Gameplay_Submit;
         public InputAction @Pickup => m_Wrapper.m_Gameplay_Pickup;
+        public InputAction @Detach => m_Wrapper.m_Gameplay_Detach;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -289,6 +323,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Pickup.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPickup;
                 @Pickup.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPickup;
                 @Pickup.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPickup;
+                @Detach.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDetach;
+                @Detach.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDetach;
+                @Detach.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDetach;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -305,6 +342,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Pickup.started += instance.OnPickup;
                 @Pickup.performed += instance.OnPickup;
                 @Pickup.canceled += instance.OnPickup;
+                @Detach.started += instance.OnDetach;
+                @Detach.performed += instance.OnDetach;
+                @Detach.canceled += instance.OnDetach;
             }
         }
     }
@@ -315,5 +355,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnSubmit(InputAction.CallbackContext context);
         void OnPickup(InputAction.CallbackContext context);
+        void OnDetach(InputAction.CallbackContext context);
     }
 }
