@@ -8318,6 +8318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DisposalZone_Van
       objectReference: {fileID: 0}
+    - target: {fileID: 7161134064345107172, guid: 7e1487ef5edb1814c96a1cd8d8a11f63, type: 3}
+      propertyPath: particleHitEffect
+      value: 
+      objectReference: {fileID: 164672, guid: 18e8dab58be783245a9e87c4db4b9ba0, type: 3}
     - target: {fileID: 7161134064345107173, guid: 7e1487ef5edb1814c96a1cd8d8a11f63, type: 3}
       propertyPath: m_RootOrder
       value: 7
