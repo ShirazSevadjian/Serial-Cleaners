@@ -69,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 4300000, guid: abdf70e86b9950647a74451f6c4549a4, type: 3}
     - target: {fileID: 3259508811677388464, guid: c1d6dd36aba98424a87d815e55aff938, type: 3}
       propertyPath: m_Name
-      value: PlaceableFurniture_Couch
+      value: PlaceableFurniture_Couch Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3259508811677388470, guid: c1d6dd36aba98424a87d815e55aff938, type: 3}
       propertyPath: m_Mesh

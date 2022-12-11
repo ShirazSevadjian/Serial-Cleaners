@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8387442179904455176, guid: 5317265477fdf804c9c40742fcc3638e, type: 3}
       propertyPath: m_Name
-      value: PlaceableFurniture_Armchair
+      value: PlaceableFurniture_Armchair Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8387442179904455182, guid: 5317265477fdf804c9c40742fcc3638e, type: 3}
       propertyPath: m_Mesh
