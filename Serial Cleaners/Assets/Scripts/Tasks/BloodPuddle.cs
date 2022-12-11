@@ -51,7 +51,7 @@ public class BloodPuddle : MonoBehaviour
         bloodManager = BloodManager.Instance; // Better to pass the reference directly?
         brushTexture = LevelManager.Instance.BrushTexture;
 
-        //ageCoroutine = StartCoroutine(AgePuddle());
+        ageCoroutine = StartCoroutine(AgePuddle());
     }
 
     private void OnTriggerStay(Collider other)

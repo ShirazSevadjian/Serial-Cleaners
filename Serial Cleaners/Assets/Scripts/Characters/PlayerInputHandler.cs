@@ -26,12 +26,11 @@ public class PlayerInputHandler : MonoBehaviour
         Material[] modelMaterials = playerMesh.materials;
 
         modelMaterials[1].color = Random.ColorHSV(0, 1, 1, 1, 0.5f, 0.5f, 1, 1);
-
     }
 
     public void Move(InputAction.CallbackContext context)
     {
-        if(player)
+        if (player)
         {
             player.Move(context);
         }
@@ -47,12 +46,19 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void Submit(InputAction.CallbackContext context)
     {
-
     }
 
     public void Pickup(InputAction.CallbackContext context)
     {
-        
+
+    }
+
+    public void Detach(InputAction.CallbackContext context)
+    {
+        if (player)
+        {
+            player.GetComponent<PlayerInteractable>().Detach(context);//Detach(context);
+        }
     }
 
     public PlayerMovement GetPlayer()

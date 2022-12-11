@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(SphereCollider))]
 public abstract class InteractableAction : MonoBehaviour
@@ -33,7 +33,7 @@ public abstract class InteractableAction : MonoBehaviour
     {
         if (_isInside)
         {
-            if (Input.GetButton("Interact") && !isFilled)
+            if (player.GetComponentInParent<PlayerInput>().actions["Pickup"].IsPressed() && !isFilled)
             {
                 fillTimer += Time.unscaledDeltaTime;
                 fillImage.fillAmount = fillTimer / fillTime;

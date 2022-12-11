@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
+using UnityEngine.InputSystem;
 
 public class PlayerInteractable : MonoBehaviour
 {
@@ -18,8 +19,6 @@ public class PlayerInteractable : MonoBehaviour
     public Transform LeftHandBone { get { return leftHandBone; } }
     public Transform RightHandBone { get { return rightHandBone; } }
 
-
-
     private Interactable interactableObject;
     //private MopInteraction mopInteraction;
 
@@ -29,10 +28,10 @@ public class PlayerInteractable : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Cancel"))
-        {
-            Detach();
-        }
+        //if (Input.GetButtonDown("Cancel"))
+        //{
+        //    Detach();
+        //}
     }
 
     public bool Attach(GameObject interactable, Transform leftHand, Transform rightHand)
@@ -106,6 +105,23 @@ public class PlayerInteractable : MonoBehaviour
             interactableObject.Detach();
             interactableObject.transform.SetParent(null);
             interactableObject = null;
+        }
+    }
+
+    public void Detach(InputAction.CallbackContext context)
+    {
+        if (interactableObject != null)
+        {
+            if (context.performed)
+            {
+                lBoneConstraint.weight = 0.0f;
+                rBoneConstraint.weight = 0.0f;
+                attached = false;
+
+                interactableObject.Detach();
+                interactableObject.transform.SetParent(null);
+                interactableObject = null; 
+            }
         }
     }
 

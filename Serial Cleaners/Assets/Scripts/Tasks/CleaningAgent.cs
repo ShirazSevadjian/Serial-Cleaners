@@ -4,7 +4,7 @@ public class CleaningAgent : InteractableAction
 {
     private MopCleaner cleaner = null;
 
-    protected virtual void OnTriggerEnter(Collider other)
+    protected override void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -19,7 +19,7 @@ public class CleaningAgent : InteractableAction
         }
     }
 
-    protected virtual void OnTriggerExit(Collider other)
+    protected override void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {

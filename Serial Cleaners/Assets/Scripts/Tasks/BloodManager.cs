@@ -31,9 +31,9 @@ public class BloodManager : TaskManager
         // Populate the gradient with the proper colours. 
         // Not optimal atm.
         GradientColorKey[] colorKeys = new GradientColorKey[2];
-        colorKeys[0].color = new Color(0.55f, 0.017f, 0.023f, 1f);
+        colorKeys[0].color = new Color(0.3f, 0.15f, 0.1f, 1f);
         colorKeys[0].time = 0.0f;
-        colorKeys[1].color = new Color(0.3f, 0.15f, 0.1f, 1f);
+        colorKeys[1].color = new Color(0.55f, 0.017f, 0.023f, 1f);
         colorKeys[1].time = 1.0f;
         colorGradient.colorKeys = colorKeys;
     }

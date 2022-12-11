@@ -109,6 +109,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: f14b41b3-a28b-4abf-a85c-7fbcd7f00918
     m_ActionName: Gameplay/Pickup[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4481892302710364611}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: Detach
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ecc499c4-0826-42f0-a8ae-93d687db3fdf
+    m_ActionName: Gameplay/Detach[/XInputControllerWindows/buttonEast,/Keyboard/x]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay

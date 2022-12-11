@@ -521,7 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808601af1f27c9b4baea036c821f2cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brush: {fileID: 2800000, guid: 8182b023c5d8b764a89eca216357f942, type: 3}
+  dryTimer: 10
 --- !u!1 &5580416858910320615
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,7 +678,7 @@ GameObject:
   - component: {fileID: 2004163569}
   m_Layer: 0
   m_Name: Mop
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
