@@ -5,7 +5,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - myCollider: {instanceID: 0}
-  - particleHitEffect: {fileID: 164672, guid: 132283b6c2baa5148bcd425b39982c90, type: 3}
+  - particleHitEffect: {fileID: 164672, guid: 18e8dab58be783245a9e87c4db4b9ba0, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
