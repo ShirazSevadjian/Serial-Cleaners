@@ -7812,6 +7812,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &653425755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 363344782192263713, guid: 0bf61ec2b33f1c344b39651eda0654f3, type: 3}
+  m_PrefabInstance: {fileID: 1899458439}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &653425756 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 363344782192263712, guid: 0bf61ec2b33f1c344b39651eda0654f3, type: 3}
+  m_PrefabInstance: {fileID: 1899458439}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653425755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70beabe23d868de4e82c41fe864743fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &653831405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9832,6 +9848,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FurniturePlacementTarget
       objectReference: {fileID: 0}
+    - target: {fileID: 6487334886719579629, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
+      propertyPath: myObject
+      value: 
+      objectReference: {fileID: 653425755}
+    - target: {fileID: 6487334886719579629, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
+      propertyPath: myObjectRI
+      value: 
+      objectReference: {fileID: 653425756}
     - target: {fileID: 6487334886719579630, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -12658,6 +12682,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d809911de0c9264c870b2c3733c01da, type: 3}
+--- !u!114 &1080185842 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6487334886719579629, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
+  m_PrefabInstance: {fileID: 839235582}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41935c5c873ba8342a7b727642c5e2c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1093040096 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2079004208414804268, guid: 656814b311a6fcc45a217d74e77ac9d3, type: 3}
@@ -22333,6 +22368,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1432371733}
     m_Modifications:
+    - target: {fileID: 363344782192263712, guid: 0bf61ec2b33f1c344b39651eda0654f3, type: 3}
+      propertyPath: myTarget
+      value: 
+      objectReference: {fileID: 1080185842}
     - target: {fileID: 363344782192263713, guid: 0bf61ec2b33f1c344b39651eda0654f3, type: 3}
       propertyPath: m_Name
       value: PlaceableFurniture_Couch Variant

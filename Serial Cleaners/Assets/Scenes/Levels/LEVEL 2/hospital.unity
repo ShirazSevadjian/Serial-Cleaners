@@ -1802,6 +1802,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -115.238
       objectReference: {fileID: 0}
+    - target: {fileID: 2416502104545049940, guid: d4f1b01371c4dd0428a52265c8f95e31, type: 3}
+      propertyPath: myTarget
+      value: 
+      objectReference: {fileID: 1131257647}
     - target: {fileID: 2416502104545049941, guid: d4f1b01371c4dd0428a52265c8f95e31, type: 3}
       propertyPath: m_Name
       value: PlaceableFurniture_HospitalChair Variant
@@ -1813,6 +1817,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2416502104545049935, guid: d4f1b01371c4dd0428a52265c8f95e31, type: 3}
   m_PrefabInstance: {fileID: 166755158}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &166755160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2416502104545049941, guid: d4f1b01371c4dd0428a52265c8f95e31, type: 3}
+  m_PrefabInstance: {fileID: 166755158}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &166755161 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2416502104545049940, guid: d4f1b01371c4dd0428a52265c8f95e31, type: 3}
+  m_PrefabInstance: {fileID: 166755158}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166755160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70beabe23d868de4e82c41fe864743fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &167968108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5578,6 +5598,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FurniturePlacementTarget_Armchair1
       objectReference: {fileID: 0}
+    - target: {fileID: 6487334886719579629, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
+      propertyPath: myObject
+      value: 
+      objectReference: {fileID: 836225548}
+    - target: {fileID: 6487334886719579629, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
+      propertyPath: myObjectRI
+      value: 
+      objectReference: {fileID: 836225549}
     - target: {fileID: 6487334886719579630, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -5629,6 +5657,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6487334886719579630, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
   m_PrefabInstance: {fileID: 433898110}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &433898112 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6487334886719579629, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
+  m_PrefabInstance: {fileID: 433898110}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41935c5c873ba8342a7b727642c5e2c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &434987708 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1186399588571282, guid: 245fcb25b5dd6074ea3452ca3a741ef5, type: 3}
@@ -6068,6 +6107,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 9.516
       objectReference: {fileID: 0}
+    - target: {fileID: 2416502104545049940, guid: d4f1b01371c4dd0428a52265c8f95e31, type: 3}
+      propertyPath: myTarget
+      value: 
+      objectReference: {fileID: 1818976436}
     - target: {fileID: 2416502104545049941, guid: d4f1b01371c4dd0428a52265c8f95e31, type: 3}
       propertyPath: m_Name
       value: PlaceableFurniture_HospitalChair Variant
@@ -6079,6 +6122,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2416502104545049935, guid: d4f1b01371c4dd0428a52265c8f95e31, type: 3}
   m_PrefabInstance: {fileID: 469125360}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &469125362 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2416502104545049941, guid: d4f1b01371c4dd0428a52265c8f95e31, type: 3}
+  m_PrefabInstance: {fileID: 469125360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &469125363 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2416502104545049940, guid: d4f1b01371c4dd0428a52265c8f95e31, type: 3}
+  m_PrefabInstance: {fileID: 469125360}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469125362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70beabe23d868de4e82c41fe864743fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &473174303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10320,6 +10379,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2092440642}
     m_Modifications:
+    - target: {fileID: 363344782192263712, guid: 0bf61ec2b33f1c344b39651eda0654f3, type: 3}
+      propertyPath: myTarget
+      value: 
+      objectReference: {fileID: 433898112}
     - target: {fileID: 363344782192263713, guid: 0bf61ec2b33f1c344b39651eda0654f3, type: 3}
       propertyPath: m_Name
       value: PlaceableFurniture_Couch Variant1
@@ -10375,6 +10438,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 363344782192263739, guid: 0bf61ec2b33f1c344b39651eda0654f3, type: 3}
   m_PrefabInstance: {fileID: 836225546}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &836225548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 363344782192263713, guid: 0bf61ec2b33f1c344b39651eda0654f3, type: 3}
+  m_PrefabInstance: {fileID: 836225546}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &836225549 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 363344782192263712, guid: 0bf61ec2b33f1c344b39651eda0654f3, type: 3}
+  m_PrefabInstance: {fileID: 836225546}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836225548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70beabe23d868de4e82c41fe864743fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &839112321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13864,6 +13943,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FurniturePlacementTarget_EntranceDeskChair
       objectReference: {fileID: 0}
+    - target: {fileID: 6487334886719579629, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
+      propertyPath: myObject
+      value: 
+      objectReference: {fileID: 166755160}
+    - target: {fileID: 6487334886719579629, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
+      propertyPath: myObjectRI
+      value: 
+      objectReference: {fileID: 166755161}
     - target: {fileID: 6487334886719579630, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -13915,6 +14002,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6487334886719579630, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
   m_PrefabInstance: {fileID: 1131257645}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1131257647 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6487334886719579629, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
+  m_PrefabInstance: {fileID: 1131257645}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41935c5c873ba8342a7b727642c5e2c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1134709527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15474,7 +15572,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305181415}
-  m_LocalRotation: {x: 0.0010571012, y: 0.8879026, z: -0.4600257, w: 0.0020403275}
+  m_LocalRotation: {x: 0.0010570856, y: 0.8879027, z: -0.4600257, w: 0.002040297}
   m_LocalPosition: {x: -0.1304347, y: 40.2, z: 28.381123}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -20031,7 +20129,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731419662}
-  m_LocalRotation: {x: 0.0010571012, y: 0.8879026, z: -0.4600257, w: 0.0020403275}
+  m_LocalRotation: {x: 0.0010570856, y: 0.8879027, z: -0.4600257, w: 0.002040297}
   m_LocalPosition: {x: 0, y: 0, z: 28.381123}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -21335,6 +21433,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FurniturePlacementTarget_Deskchair
       objectReference: {fileID: 0}
+    - target: {fileID: 6487334886719579629, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
+      propertyPath: myObject
+      value: 
+      objectReference: {fileID: 469125362}
+    - target: {fileID: 6487334886719579629, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
+      propertyPath: myObjectRI
+      value: 
+      objectReference: {fileID: 469125363}
     - target: {fileID: 6487334886719579630, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -21386,6 +21492,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6487334886719579630, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
   m_PrefabInstance: {fileID: 1818976434}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1818976436 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6487334886719579629, guid: a691ffad9180ce64daea2f2aedf32ce5, type: 3}
+  m_PrefabInstance: {fileID: 1818976434}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41935c5c873ba8342a7b727642c5e2c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1823537046 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1025150195348668, guid: 0c4c74f81d490384cb156486c89d98c1, type: 3}
