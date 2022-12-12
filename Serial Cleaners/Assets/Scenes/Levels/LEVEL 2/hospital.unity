@@ -20993,6 +20993,10 @@ PrefabInstance:
       propertyPath: currentLvl
       value: 
       objectReference: {fileID: 11400000, guid: 099297b25afffb04381333d37c945a92, type: 2}
+    - target: {fileID: 1885500215353258900, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
+      propertyPath: remainingTimerDuration
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 5944691371478843887, guid: 0bed7fb5038f35843842fe6225f4280f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
