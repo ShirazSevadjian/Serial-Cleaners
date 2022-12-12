@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/LEVEL 1 new/LowPolyInterior_Demo 1.unity
     guid: 8bdc62e6c342a5c4ea4d133e322c3a36
+  - enabled: 1
+    path: Assets/Scenes/Levels/LEVEL 2/hospital.unity
+    guid: efba885505ab5d643b961a64116b9f45
+  - enabled: 1
+    path: Assets/Scenes/Levels/LEVEL 3/Scenes 1/Chemical Lab.unity
+    guid: a3eb6e34e6ee9424f83f1130773898a1
   m_configObjects: {}
